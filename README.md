@@ -57,4 +57,4 @@ Você também pode incorporar gráficos, por exemplo:
 ![](README_files/figure-gfm/pressure-1.png)<!-- -->
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
-de figura resultantes para que eles sejam exibidos no GitHub.
+de figura resultantes para que eles sejam exibidos no GitHub. xxxxxxx

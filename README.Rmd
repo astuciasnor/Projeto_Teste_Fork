@@ -55,7 +55,9 @@ Você ainda precisará renderizar `README.Rmd` regularmente, para manter `README
 Você também pode incorporar gráficos, por exemplo:
 
 ```{r pressure, echo = FALSE}
-plot(pressure, col = "red", bty = "l", xlab = "Temperatura", ylab = "Pressão", pch = 19, main = "Relação entre Temperatura e Pressão")
+plot(pressure, col = "red", bty = "l", pch = 19,
+     xlab = "Temperatura", ylab = "Pressão",  
+     main = "Relação entre Temperatura e Pressão")
 ```
 
-Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub.
+Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub. xxxxxxx

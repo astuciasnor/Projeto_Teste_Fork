@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -31,18 +33,29 @@ O Objetivo do projeto Projeto_Teste_Fork é fornecer informações necessários 
 
 5.  Instale o pacote `usethis` e carregue-o
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+# Configure o Git/Github no RStudio
+
+Vams usar o pacote usethis e os comando abaixo.
+
+```{r}
+usethis::use_git_config(user.name = "Evaldo Martins", 
+                        user.email = "evaldomartins@ufpa.br")
+```
+
+# Anexo de criação do arquivo Radme.rmd
+
+Para criar o Readme.rmd usei a função `usethis::use_readme_rmd()` . O que é especial sobre usar o `README.Rmd` em vez de apenas o `README.md`? Você pode incluir chunks como este:
 
 ```{r cars}
 summary(cars)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+Você ainda precisará renderizar `README.Rmd` regularmente, para manter `README.md` atualizado.
 
-You can also embed plots, for example:
+Você também pode incorporar gráficos, por exemplo:
 
 ```{r pressure, echo = FALSE}
-plot(pressure)
+plot(pressure, col = "red", bty = "l", xlab = "Temperatura", ylab = "Pressão", pch = 19, main = "Relação entre Temperatura e Pressão")
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub.
+Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub.

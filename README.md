@@ -23,8 +23,20 @@ Git/Github na interface RStudio.
 
 5.  Instale o pacote `usethis` e carregue-o
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+# Configure o Git/Github no RStudio
+
+Vams usar o pacote usethis e os comando abaixo.
+
+``` r
+usethis::use_git_config(user.name = "Evaldo Martins", 
+                        user.email = "evaldomartins@ufpa.br")
+```
+
+# Anexo de criação do arquivo Radme.rmd
+
+Para criar o Readme.rmd usei a função `usethis::use_readme_rmd()` . O
+que é especial sobre usar o `README.Rmd` em vez de apenas o `README.md`?
+Você pode incluir chunks como este:
 
 ``` r
 summary(cars)
@@ -37,12 +49,12 @@ summary(cars)
 #>  Max.   :25.0   Max.   :120.00
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+Você ainda precisará renderizar `README.Rmd` regularmente, para manter
+`README.md` atualizado.
 
-You can also embed plots, for example:
+Você também pode incorporar gráficos, por exemplo:
 
 ![](README_files/figure-gfm/pressure-1.png)<!-- -->
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub.
+Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
+de figura resultantes para que eles sejam exibidos no GitHub.

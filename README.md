@@ -203,8 +203,8 @@ reversão e empurrá-la para o repositório remoto:
 
 Se você deseja desfazer a mesclagem completamente e voltar a um estado
 anterior do repositório, você pode usar o comando **`git reset`**. Este
-comando deve ser usado com cuidado, pois pode reescrever o histórico do
-repositório.
+comando deve ser usado com **cuidado**, pois pode reescrever o histórico
+do repositório.
 
 1.  Identifique o hash do commit anterior à mesclagem.
 
@@ -241,6 +241,11 @@ antes de executar comandos Git.
 
 Com esses passos, você deve ser capaz de desfazer uma ação mesclada em
 seu projeto GitHub usando RStudio e **`usethis`**.
+
+Mais informações neste vídeo:  
+<https://www.youtube.com/watch?v=CAlg29rF2VY>
+
+<https://www.youtube.com/watch?v=Y9h-1u6uQ6c>
 
 # Anexo de criação do arquivo Radme.rmd
 

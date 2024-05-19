@@ -1,14 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Projeto_Teste_Fork
+# Modelo Para Usar Controle de Version (Clonar e/ou Bifurcar (Fork)) de Projetos
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 O Objetivo do projeto Projeto_Teste_Fork é fornecer informações
 necessários para usuários inciais e intermediários aprenderem a usar o
-Git/Github na interface RStudio.
+Git/Github na interface RStudio para usar Controle de Versão de
+Projetos.
 
 # Instruções de uso inicias
 
@@ -245,7 +246,16 @@ seu projeto GitHub usando RStudio e **`usethis`**.
 Mais informações neste vídeo:  
 <https://www.youtube.com/watch?v=CAlg29rF2VY>
 
-<https://www.youtube.com/watch?v=Y9h-1u6uQ6c>
+Riffomonas (Série):
+
+[How to set up git for a bioinformatics project: using version control
+with git and GitHub](https://www.youtube.com/watch?v=DnwEaa5QtpI)
+
+[Integrating RStudio with a new or existing project on GitHub
+(CC120)](https://www.youtube.com/watch?v=sxErFMF7BJY&list=PLmNrK_nkqBpJtNdQBPhPWjIFRYeFOGfJ1&index=10)
+
+[Easy ways to go back in your git commit history with RStudio
+(CC153)](https://www.youtube.com/watch?v=Y9h-1u6uQ6c&list=PLmNrK_nkqBpJtNdQBPhPWjIFRYeFOGfJ1&index=7)
 
 # Anexo de criação do arquivo Radme.rmd
 

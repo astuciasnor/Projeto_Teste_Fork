@@ -130,8 +130,8 @@ utilize os comandos abaixo.
     desejados ou mesmo criar novos arquivos e pastas. Vamos fazer sua
     contribuição incluindo seu nome e e-mail no arquivo Readm.md
 3.  Após términos das suas alterações, realize o commit e NÃO o PUSH, o
-    qual deve ser feito via a função **`usethis::r_push()`**
-4.  No console, digite **`usethis::r_push()`** e dê enter
+    qual deve ser feito via a função **`usethis::pr_push()`**
+4.  No console, digite **`usethis::pr_push()`** e dê enter
 5.  A página do Github se abrirá oara que você possa completar o
     `Pull Request (PR)`
 6.  Então explique as mudanças que fez e clique em Criar Pull Request
@@ -243,10 +243,12 @@ antes de executar comandos Git.
 Com esses passos, você deve ser capaz de desfazer uma ação mesclada em
 seu projeto GitHub usando RStudio e **`usethis`**.
 
-Mais informações neste vídeo:  
-<https://www.youtube.com/watch?v=CAlg29rF2VY>
+**Mais informações neste vídeo:**
 
-Riffomonas (Série):
+[Curso gratuito Git e Github \#7 - Desfazendo
+commit](https://www.youtube.com/watch?v=CAlg29rF2VY)  
+
+**E nesta Séerie Riffomonas:**
 
 [How to set up git for a bioinformatics project: using version control
 with git and GitHub](https://www.youtube.com/watch?v=DnwEaa5QtpI)

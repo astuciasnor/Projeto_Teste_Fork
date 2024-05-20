@@ -180,15 +180,15 @@ pr_init(branch = "ajuda_grafico1")
 11. Como boa prática, sempre comunique o mantenedor de suas
     modificaçãoes.
 
-| \#  | Nome | e-mail |
-|:---:|:----:|:------:|
-|  1  |      |        |
-|  2  |      |        |
-|  3  |      |        |
-|  4  |      |        |
-|  5  |      |        |
-|  6  |      |        |
-|  7  |      |        |
+| \#  |          Nome           |        e-mail         |
+|:---:|:-----------------------:|:---------------------:|
+|  1  | Evaldo Martins da Silva | evaldomartins@ufpa.br |
+|  2  |                         |                       |
+|  3  |                         |                       |
+|  4  |                         |                       |
+|  5  |                         |                       |
+|  6  |                         |                       |
+|  7  |                         |                       |
 
 Lista de Colaboradores do ProjetoRepositório
 

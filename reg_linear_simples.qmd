@@ -42,5 +42,6 @@ Agora vamos fazer o grafico.
 df %>% 
   ggplot(aes(x = `Comprimento (cm)`, y = `Peso (g)`)) +
   geom_point(col="red", size=4) + 
+  geom_smooth(method = "lm") +
   theme_minimal()
 ```

@@ -117,6 +117,12 @@ usethis::create_from_github(
   fork = TRUE)
 ```
 
+### Inclua pastas e arquivos no gitignore
+
+Geralemente precisamos que arquivos e pastas não sejam compartilhados.
+Para isso insira as pastas e arquivos no arquivo `gitignore`. Verifique
+neste Projeto_Teste_Fork quais pastas e arquivos não são compartilhados.
+
 # Contribuindo com o Projeto de Análise
 
 Após ter criado um repositório a partir do Github e com a opção de fork
@@ -195,9 +201,31 @@ Lista de Colaboradores do ProjetoRepositório
 # Revertendo mudanças
 
 Caso aconteça algum erro, é possível voltar a momento anterior às
-modificações. Mas priemeiro vamos ver o histórico de atualizações.
+modificações. Mas primeiro vamos ver o histórico de atualizações. Vamos
+trabalhar de agora em diante nesta parte pelo terminal. Esta parte de
+rever mudanças pode não ser necessárias, pois usamos poucoas linahs de
+códigos. Mesmo assim, vamos ver alguns funções básicas , caso preccise.
 
 ## Como verificar o histórico de atualizações
+
+Certifique-se de que vc está no diretório do proejto, digitando
+`getwd()` no console. Agora vamos ver o histórico de comando. Digite no
+terminal:
+
+`git reflog`
+
+## Criação de Branches e Commits
+
+Verifica as suas branches como o comando
+
+`git branch`
+
+Aparecerão as branches e aquela onde stá será destacada em verde.
+
+Vamos agora criar uma nova branch em que trabalharei no arquivo de texto
+mais simples para aprendermos
+
+`git branch textos`
 
 ## **Considerações Finais**
 

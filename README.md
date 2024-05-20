@@ -139,13 +139,15 @@ utilize os comandos abaixo.
 7.  Aguarde o mantenedor do projeto fazer a mesclagem (após a mesclagem
     (merge), aparecer o botão Merged (Ou Mesclado). Só então você
     finalizar sua contribuição
-8.  No Rstudio e no projeto onde realizou a contribuição, volte para a
-    branch `master` , clique primeiro no botão `Pull` da aba git para
-    atualizar as contribuições suas e que eventualemente o mantenedor do
-    repositório acrescentou.
-9.  Delete a branch criada usando o comando **usethis::pr_finish()**.
+8.  O mantenedor pode fazer a mesclagem (merge) pelo Github ou pelo
+    terminal (git pull, git merge staging, git push).
+9.  No Rstudio e no projeto onde realizou a contribuição, volte para a
+    branch `master` , **clique primeiro** no botão `Pull` da aba git
+    para atualizar as contribuições suas e que eventualemente o
+    mantenedor do repositório acrescentou ou outra pessoa.
+10. Delete a branch criada usando o comando **usethis::pr_finish()**.
     Pronto você está com a versão mais atualizada.
-10. Como boa prática, sempre comunique o mantenedor de suas
+11. Como boa prática, sempre comunique o mantenedor de suas
     modificaçãoes.
 
 # Desfazendo uma mudança

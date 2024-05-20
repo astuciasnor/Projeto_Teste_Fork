@@ -198,9 +198,11 @@ Com esses passos, você deve ser capaz de desfazer uma ação mesclada em seu pr
 
 **Mais informações neste vídeo:**
 
+[Curso de Git e Github COMPLETO 2023 [Iniciantes] + Desafios + Muita Prática](https://www.youtube.com/watch?v=kB5e-gTAl_s&t=539s)
+
 [Curso gratuito Git e Github #7 - Desfazendo commit](https://www.youtube.com/watch?v=CAlg29rF2VY)\
 
-**E nesta Séerie Riffomonas:**
+**E nesta série Riffomonas (Code Club):**
 
 [How to set up git for a bioinformatics project: using version control with git and GitHub](https://www.youtube.com/watch?v=DnwEaa5QtpI)
 
@@ -208,7 +210,7 @@ Com esses passos, você deve ser capaz de desfazer uma ação mesclada em seu pr
 
 [Easy ways to go back in your git commit history with RStudio (CC153)](https://www.youtube.com/watch?v=Y9h-1u6uQ6c&list=PLmNrK_nkqBpJtNdQBPhPWjIFRYeFOGfJ1&index=7)
 
-# Anexo de criação do arquivo Radme.rmd
+# Anexo de criação do arquivo Readme.rmd
 
 Para criar o Readme.rmd usei a função `usethis::use_readme_rmd()` . O que é especial sobre usar o `README.Rmd` em vez de apenas o `README.md`? Você pode incluir chunks como este:
 

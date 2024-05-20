@@ -158,75 +158,17 @@ pr_init(branch = "ajuda_grafico1")
 
 : Lista de Colaboradores do ProjetoRepositório
 
-# Desfazendo uma mudança
+# Revertendo mudanças
 
-Caso aconteça algum erro, é possível voltar a momento anterior às modificações. Desfazer uma ação mesclada em um projeto GitHub pode ser um pouco complicado, especialmente se a mudança já foi empurrada para o repositório remoto. No entanto, com o **`usethis`** e o RStudio, você pode realizar isso seguindo algumas etapas. Aqui está um guia passo a passo para desfazer uma ação mesclada:
+Caso aconteça algum erro, é possível voltar a momento anterior às modificações. Mas priemeiro vamos ver o histórico de atualizações.
 
-### **Passo 1: Identificar o commit a ser revertido**
+## Como verificar o histórico de atualizações
 
-Primeiro, você precisa identificar o hash do commit que você deseja reverter. No RStudio, você pode visualizar o histórico de commits no painel Git:
-
-1.  Abra o painel Git em RStudio.
-
-2.  Clique em "History" para ver a lista de commits.
-
-3.  Encontre o commit que representa a mesclagem que você deseja desfazer e copie seu hash (um identificador alfanumérico).
-
-### **Passo 2: Reverter o commit**
-
-Você pode usar o pacote **`usethis`** para ajudar a gerenciar seu repositório, mas a reversão de commits específicos é normalmente feita usando comandos Git diretamente. Aqui estão os comandos Git que você pode usar no terminal do RStudio:
-
-1.  Abra o terminal no RStudio.
-
-2.  Para reverter um commit mesclado, use o comando:
-
-    git revert -m 1 <hash_do_commit>
-
-    Onde **`<hash_do_commit>`** é o hash do commit de mesclagem que você deseja reverter. A opção **`-m 1`** indica que você está revertendo um commit de mesclagem e especifica o "primeiro" pai da mesclagem.
-
-### **Passo 3: Confirmar e empurrar a reversão**
-
-Depois de reverter o commit, você precisará confirmar (commit) a reversão e empurrá-la para o repositório remoto:
-
-1.  No terminal do RStudio, confirme a reversão:
-
-    git commit -m "Revertendo o commit de mesclagem \<hash_do_commit\>"
-
-2.  Empurre as alterações para o repositório remoto:
-
-    git push
-
-### **Alternativa: Reset para um estado anterior**
-
-Se você deseja desfazer a mesclagem completamente e voltar a um estado anterior do repositório, você pode usar o comando **`git reset`**. Este comando deve ser usado com **cuidado**, pois pode reescrever o histórico do repositório.
-
-1.  Identifique o hash do commit anterior à mesclagem.
-
-2.  No terminal do RStudio, use o comando:
-
-    git reset --hard \<hash_do_commit_anterior\>
-
-3.  Empurre a nova história (forçada) para o repositório remoto:
-
-    git push --force
-
-### **Considerações Finais**
+## **Considerações Finais**
 
 -   **Reverter um commit:** Mantém o histórico do commit original e adiciona um novo commit que desfaz as mudanças.
 
 -   **Resetar para um estado anterior:** Reescreve a história do repositório, removendo commits subsequentes.
-
-### **Nota sobre o uso de `usethis`**
-
-O **`usethis`** facilita várias operações comuns no Git, mas para ações específicas como reverter commits, é melhor usar comandos Git diretamente no terminal do RStudio. No entanto, você pode usar **`usethis`** para preparar o ambiente, por exemplo, navegando até o diretório do projeto:
-
-```{r}
-# usethis::proj_activate("caminho/do/seu/projeto")
-```
-
-Essa abordagem garante que você esteja trabalhando no diretório correto antes de executar comandos Git.
-
-Com esses passos, você deve ser capaz de desfazer uma ação mesclada em seu projeto GitHub usando RStudio e **`usethis`**.
 
 # Mais informações
 

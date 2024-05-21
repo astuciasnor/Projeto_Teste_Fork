@@ -357,6 +357,7 @@ alterações via a branch sistema-de-login
     –hard 5a6cc0a
 4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github
     Completo 2023 para mais esclarecimentos.
+5.  vvvvvvvvvvvvvv
 
 ## **Considerações Finais**
 

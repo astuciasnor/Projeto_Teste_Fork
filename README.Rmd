@@ -197,11 +197,9 @@ Vamos agora exercitar o que já fizemos com as funções do pacote usethis e tam
 
 Aparecerão as branches e a branch atual, que será destacada em verde.
 
-<<<<<<< HEAD
-Vamos agora criar uma nova branch em que trabalharei no arquivo de texto mais simples para aprendermos a usar essas funcionalidades. Chamaremos de `textos`.
-=======
+
 -   Vamos agora criar uma nova branch em que trabalharemos num arquivo de texto mais simples para aprendermos a usar essas funcionalidades do git. Chamaremo-la de `textos`.
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+
 
 `git branch textos`
 

@@ -249,15 +249,9 @@ e também com funções do git.
 
 Aparecerão as branches e a branch atual, que será destacada em verde.
 
-<<<<<<< HEAD
-Vamos agora criar uma nova branch em que trabalharei no arquivo de texto
-mais simples para aprendermos a usar essas funcionalidades. Chamaremos
-de `textos`.
-=======
 - Vamos agora criar uma nova branch em que trabalharemos num arquivo de
   texto mais simples para aprendermos a usar essas funcionalidades do
   git. Chamaremo-la de `textos`.
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
 
 `git branch textos`
 
@@ -265,28 +259,23 @@ Verifique se ela foi criado com o comando
 
 `git branch`
 
-<<<<<<< HEAD
-Mude agora para a branch em que deseja trabalhar. Digite os seguintes
-comando:
-=======
-- Mude agora para a branch em que deseja trabalhar. Digite os seguintes
-  comando:
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+\<\<\<\<\<\<\< HEAD Mude agora para a branch em que deseja trabalhar.
+Digite os seguintes comando: ======= - Mude agora para a branch em que
+deseja trabalhar. Digite os seguintes comando: \>\>\>\>\>\>\>
+daf2003430c6fb163c3b14d6132d17e042d6d079
 
 `git checkout textos`
 
 `git branch`
 
-<<<<<<< HEAD
-Vamos agora fazer umas alterações pequenas no arquvio de texto e salve e
-feche o arquivo. Digite o seguinte comando abaixo para identificar uma
-modificação:
+\<\<\<\<\<\<\< HEAD Vamos agora fazer umas alterações pequenas no
+arquvio de texto e salve e feche o arquivo. Digite o seguinte comando
+abaixo para identificar uma modificação:
 
 `git status`
 
-Adicione a modificação. Mas lembre que a modificaçõa não foi para a
-branch master
-=======
+# Adicione a modificação. Mas lembre que a modificaçõa não foi para a branch master
+
 - Vamos agora fazer umas alterações pequenas no arquvio de texto, salvar
   e fechar o arquivo. Digite o seguinte comando abaixo para identificar
   qualquer modificação nos arquivos:
@@ -294,15 +283,14 @@ branch master
 `git status`
 
 - Adicione a modificação. Mas lembre que a modificaçõa ainda não foi
-  para a branch master
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+  para a branch master \>\>\>\>\>\>\>
+  daf2003430c6fb163c3b14d6132d17e042d6d079
 
 `git add .`
 
 `git status`
 
-<<<<<<< HEAD
-Vamos fazer o commit dessa alteração
+\<\<\<\<\<\<\< HEAD Vamos fazer o commit dessa alteração
 
 `git commit -m "Adicionando o sobrenome"`
 
@@ -312,7 +300,15 @@ Github
 `git push`
 
 Ele dá uma mesnagem de erro quando criamos uma branch nova. Copie a
-=======
+sugestão de comando e execute novamente.
+
+`git push --set-upstream origin textos`
+
+Verifique agora no Github as duas versões do arquivo texto em cada uma
+das branches, textos e master.
+
+# Vamos, então realizar a MESCLAGEM da textos para a master. Vamos voltr ao terminal do rstudio e digitar
+
 - Vamos fazer o commit dessa alteração (versionamento)
 
 `git commit -m "Adicionando o sobrenome"`
@@ -323,24 +319,16 @@ Ele dá uma mesnagem de erro quando criamos uma branch nova. Copie a
 `git push`
 
 Ele dá uma mensagem de erro quando criamos uma branch nova. Copie a
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
 sugestão de comando e execute novamente.
 
 `git push --set-upstream origin textos`
 
-<<<<<<< HEAD
-Verifique agora no Github as duas versões do arquivo texto em cada uma
-das branches, textos e master.
-
-Vamos, então realizar a MESCLAGEM da textos para a master. Vamos voltr
-ao terminal do rstudio e digitar
-=======
 - Verifique agora no Github as duas versões do arquivo de texto em cada
   uma das branches, `textos` e `master`.
 
 - Vamos, então realizar a MESCLAGEM da `textos` para a `master`. Vamos
-  voltar ao terminal do Rstudio e digitar
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+  voltar ao terminal do Rstudio e digitar \>\>\>\>\>\>\>
+  daf2003430c6fb163c3b14d6132d17e042d6d079
 
 `git branch`
 
@@ -351,12 +339,12 @@ atualizações, no cado a branch master com os seguintes comandos:
 
 `git branch`
 
-<<<<<<< HEAD
-Agora podemos mesclar da textos para a master. Recomenda-se antes de
-fazer o comando abaixo, puxe as atualizaçãoes que estão no servidor para
-a sua máquina , pois pode ser que algum outro colega fez atualizações e
-você pode correr o risco de estar fazendo mesclagem com uma versão
-antiga. Digite primeiro `git pull` e depois o comando abaixo:
+\<\<\<\<\<\<\< HEAD Agora podemos mesclar da textos para a master.
+Recomenda-se antes de fazer o comando abaixo, puxe as atualizaçãoes que
+estão no servidor para a sua máquina , pois pode ser que algum outro
+colega fez atualizações e você pode correr o risco de estar fazendo
+mesclagem com uma versão antiga. Digite primeiro `git pull` e depois o
+comando abaixo:
 
 `git merge textos`
 
@@ -370,8 +358,8 @@ atualizado na master.
 Só adicionne os códigos que foram testados e estaão funcionando
 corretamente.
 
-## Mais um exercício
-=======
+# \## Mais um exercício
+
 `git pull`
 
 Agora podemos mesclar da `textos` para a `master`.
@@ -395,13 +383,13 @@ Só adicione os códigos que foram testados e estão funcionando
 corretamente.
 
 ## **Mais um exercício**
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+
+> > > > > > > daf2003430c6fb163c3b14d6132d17e042d6d079
 
 Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade
 qualquer
 
-1.  Faça a atualização: `git pull` na master
-<<<<<<< HEAD
+1.  Faça a atualização: `git pull` na master \<\<\<\<\<\<\< HEAD
 2.  Crie a sua branch e mude para ela:
     `git checkout -b sistema-de-login master`
 3.  Criie um novo arquivo txt chamado sistema de login
@@ -448,37 +436,40 @@ alterações via a branch sistema-de-login
 
 1.  Digite git reflog e veja qual a referência anterior a essa
     modificação
+
 2.  Para retornar, digite : git reset –hard 7d0932f
+
 3.  Caso vc se arrependa desse eliminação, você pode fazer um git reflog
     e digitar o numero de identificação da modificação final: git reset
     –hard 5a6cc0a
+
 4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github
     Completo 2023 para mais esclarecimentos.
-5.  vvvvvvvvvvvvvv
-=======
 
-2.  Crie a sua branch e mude para ela:
+5.  # vvvvvvvvvvvvvv
+
+6.  Crie a sua branch e mude para ela:
     `git checkout -b sistema-de-login master`
 
-3.  Crie um novo arquivo txt chamado `sistema de login.txt` e salve-o.
+7.  Crie um novo arquivo txt chamado `sistema de login.txt` e salve-o.
 
-4.  Digite `git add . && git status` e o arquivo ficará pronto para ser
+8.  Digite `git add . && git status` e o arquivo ficará pronto para ser
     adicionado
 
-5.  Confirme essas alterações: `git commit -m "Criado sistema de Login"`
+9.  Confirme essas alterações: `git commit -m "Criado sistema de Login"`
 
-6.  Digamos que tudo esteja funcionando e checado o código, volte para a
+10. Digamos que tudo esteja funcionando e checado o código, volte para a
     master:
 
     `git checkout master && git branch`
 
-7.  Atualize o código da master: `git pull`
+11. Atualize o código da master: `git pull`
 
-8.  Agora sim, você pode mesclar: `git merge sistema-de-login master`
+12. Agora sim, você pode mesclar: `git merge sistema-de-login master`
 
-9.  Mande essa alteração para o servidor: `git push`
+13. Mande essa alteração para o servidor: `git push`
 
-10. Observe no servidor do github as alterações
+14. Observe no servidor do github as alterações
 
 # **Criando um Pull Request**
 
@@ -541,8 +532,8 @@ atualizações.
     modificação que se arrependeu de apagar: `git reset --hard 5a6cc0a`
 
 4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github
-    Completo 2023 para mais esclarecimentos.
->>>>>>> daf2003430c6fb163c3b14d6132d17e042d6d079
+    Completo 2023 para mais esclarecimentos. \>\>\>\>\>\>\>
+    daf2003430c6fb163c3b14d6132d17e042d6d079
 
 ## **Considerações Finais**
 

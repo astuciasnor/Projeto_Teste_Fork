@@ -483,6 +483,13 @@ Você também pode incorporar gráficos, por exemplo:
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
 
+- Teste para duas alterações sem comitat
+
 Acrescento 1 linha ———————
 
 Acescento outra linha —————–
+
+- Teste para uma alteração de pois de comitat
+
+Acrescento Terceira linha Teste de Commitar uma alateração e depois
+modificar

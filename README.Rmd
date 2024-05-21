@@ -376,3 +376,5 @@ Acescento outra linha —————–
 -   Teste para uma alteração de pois de comitat
 
 -   Inserindo esta linha para commitar sem push
+
+-   Inserindo esta linha após o commit da anterior

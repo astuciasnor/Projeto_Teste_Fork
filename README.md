@@ -490,3 +490,5 @@ Acrescento 1 linha ———————
 Acescento outra linha —————–
 
 - Teste para uma alteração de pois de comitat
+
+- Inserindo esta linha para commitar sem push

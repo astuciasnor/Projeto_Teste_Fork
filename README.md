@@ -383,11 +383,11 @@ alterações via a branch sistema-de-login.
     Você faz um push e não mescla nada como feito acima. Digite de
     dentro da branch modificada: `git push`
 
-6.  O Sitema vai pedir que digite um novo código:
+6.  O Sitema vai pedir que digite um novo comando:
     `git push --set-upstream origin sistema-de-login`
 
-7.  Veja página no Github e observará que a aparecer que a branch
-    sistema-de-login foi atualizada recentemente e pede para comparar e
+7.  Veja página no Github e observará que aparece a branch
+    sistema-de-login atualizada recentemente e que pede para comparar e
     fazer Pull Request. Clique em `Compare & Pull Request`
 
 8.  O sistema muda para a janela indicando que a solicitação de
@@ -431,9 +431,14 @@ atualizações.
 - **Resetar para um estado anterior:** Reescreve a história do
   repositório, removendo commits subsequentes.
 
+<<<<<<< HEAD
 - **Toda vez que fizer um commit, tem que fazer `git push` ou
   `pr_push()`** antes de fazer novas alterações, para evitar a mensagem
   de commit a frente das modificações.
+=======
+- Toda vez que fizer um commit, tem que fazer `git push` ou `pr_push()`
+  antes de fazer novas alterações, para evitar a mensagem
+>>>>>>> 8ba1b6f357e5edbde3d8050e6b7e52c10be32cba
 
 # Mais informações
 
@@ -480,5 +485,10 @@ Você também pode incorporar gráficos, por exemplo:
 
 ![](README_files/figure-gfm/pressure-1.png)<!-- -->
 
+<<<<<<< HEAD
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
+=======
+Nesse caso, não se esqueça de fazer o commit e enviar (botão Push) os
+arquivos da figura resultantes para que eles sejam exibidos no GitHub.
+>>>>>>> 8ba1b6f357e5edbde3d8050e6b7e52c10be32cba

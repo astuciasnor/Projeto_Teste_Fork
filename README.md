@@ -259,7 +259,7 @@ Aparecerão as branches e a branch atual, que será destacada em verde.
 
 - Vamos agora criar uma nova branch em que trabalharemos num arquivo de
   texto mais simples para aprendermos a usar essas funcionalidades do
-  git. Chamaremo-la de `textos`.
+  git. Chamaremos essa branch de `textos`.
 
 `git branch textos`
 

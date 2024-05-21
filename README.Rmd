@@ -146,7 +146,7 @@ pr_init(branch = "ajuda_grafico1")
     usethis::pr_finish()
     ```
 
-10.  Pronto, você está com a versão mais atualizada na sua brach principal (master)
+10. Pronto, você está com a versão mais atualizada na sua brach principal (master)
 
 11. Como boa prática, sempre comunique o mantenedor de suas modificaçãoes.
 
@@ -224,4 +224,4 @@ plot(pressure, col = "red", bty = "l", pch = 19,
      main = "Relação entre Temperatura e Pressão")
 ```
 
-Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub. xxxxxxx
+Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub.

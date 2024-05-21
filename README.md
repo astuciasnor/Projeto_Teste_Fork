@@ -431,9 +431,11 @@ atualizações.
 - **Resetar para um estado anterior:** Reescreve a história do
   repositório, removendo commits subsequentes.
 
-- **Toda vez que fizer um commit, tem que fazer `git push` ou
+- **Recomenda-se toda vez que fizer um commit, deve fazer `git push` ou
   `pr_push()`** antes de fazer novas alterações, para evitar a mensagem
-  de commit a frente das modificações.
+  de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado
+  em fazer pull entre seu commit e seu push, pois pode gerar conflito de
+  versões. Tudo para evitar trabalhar em versões não atualizadas.
 
 # Mais informações
 
@@ -482,15 +484,3 @@ Você também pode incorporar gráficos, por exemplo:
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
-
-- Teste para duas alterações sem comitat
-
-Acrescento 1 linha ———————
-
-Acescento outra linha —————–
-
-- Teste para uma alteração de pois de comitat
-
-- Inserindo esta linha para commitar sem push
-
-- Inserindo esta linha após o commit da anterior

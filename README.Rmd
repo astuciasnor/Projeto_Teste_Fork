@@ -175,25 +175,29 @@ pr_init(branch = "ajuda_grafico1")
 
 : Lista de Colaboradores do ProjetoRepositório
 
-# **Revertendo mudanças**
+# **Trabalhando com versionamento**
 
-Caso aconteça algum erro, é possível voltar a momento anterior às modificações. Mas primeiro vamos ver o histórico de atualizações. Vamos trabalhar de agora em diante nesta parte pelo terminal. Esta parte de rever mudanças pode não ser necessárias, pois usamos poucoas linahs de códigos. Mesmo assim, vamos ver alguns funções básicas , caso preccise.
+De agora em diante, vamos trabalhar via Terminal do RStudio a fim de trabalhar de forma mais profissional com versionamento.
 
-## **Como verificar o histórico de atualizações**
+## **Verificando o histórico de atualizações**
 
-Certifique-se de que vc está no diretório do proejto, digitando `getwd()` no console. Agora vamos ver o histórico de comando. Digite no terminal:
+Certifique-se de que vc está no diretório do projeto, digitando `getwd()` no console. Agora vamos ver o histórico de comando. Digite no terminal:
 
 `git reflog`
 
+A aparecerá uma lista de todos os commits (versionamentos) que você já fez no projeto.
+
+Vamos agora exercitar o que já fizemos com as funções do pacote usethis e também com funções do git.
+
 ## **Criação de Branches e Commits**
 
-Verifica as suas branches como o comando
+-   Verifica as suas branches como o comando
 
 `git branch`
 
-Aparecerão as branches e aquela onde stá será destacada em verde.
+Aparecerão as branches e a branch atual, que será destacada em verde.
 
-Vamos agora criar uma nova branch em que trabalharei no arquivo de texto mais simples para aprendermos a usar essas funcionalidades. Chamaremos de textos.
+-   Vamos agora criar uma nova branch em que trabalharemos num arquivo de texto mais simples para aprendermos a usar essas funcionalidades do git. Chamaremo-la de `textos`.
 
 `git branch textos`
 
@@ -201,37 +205,37 @@ Verifique se ela foi criado com o comando
 
 `git branch`
 
-Mude agora para a branch em que deseja trabalhar. Digite os seguintes comando:
+-   Mude agora para a branch em que deseja trabalhar. Digite os seguintes comando:
 
 `git checkout textos`
 
 `git branch`
 
-Vamos agora fazer umas alterações pequenas no arquvio de texto e salve e feche o arquivo. Digite o seguinte comando abaixo para identificar uma modificação:
+-   Vamos agora fazer umas alterações pequenas no arquvio de texto, salvar e fechar o arquivo. Digite o seguinte comando abaixo para identificar qualquer modificação nos arquivos:
 
 `git status`
 
-Adicione a modificação. Mas lembre que a modificaçõa não foi para a branch master
+-   Adicione a modificação. Mas lembre que a modificaçõa ainda não foi para a branch master
 
 `git add .`
 
 `git status`
 
-Vamos fazer o commit dessa alteração
+-   Vamos fazer o commit dessa alteração (versionamento)
 
 `git commit -m "Adicionando o sobrenome"`
 
-Está tudo certo até agora. agora vamos fazer o git push para enviar ao Github
+-   Estando tudo certo até agora, vamos fazer o `git push` para enviar ao Github
 
 `git push`
 
-Ele dá uma mesnagem de erro quando criamos uma branch nova. Copie a sugestão de comando e execute novamente.
+Ele dá uma mensagem de erro quando criamos uma branch nova. Copie a sugestão de comando e execute novamente.
 
 `git push --set-upstream origin textos`
 
-Verifique agora no Github as duas versões do arquivo texto em cada uma das branches, textos e master.
+-   Verifique agora no Github as duas versões do arquivo de texto em cada uma das branches, `textos` e `master`.
 
-Vamos, então realizar a MESCLAGEM da textos para a master. Vamos voltr ao terminal do rstudio e digitar
+-   Vamos, então realizar a MESCLAGEM da `textos` para a `master`. Vamos voltar ao terminal do Rstudio e digitar
 
 `git branch`
 
@@ -241,17 +245,21 @@ Agora vamos unir o código. Você vai entrar na branch que vai receber as atuali
 
 `git branch`
 
-Agora podemos mesclar da textos para a master. Recomenda-se antes de fazer o comando abaixo, puxe as atualizaçãoes que estão no servidor para a sua máquina , pois pode ser que algum outro colega fez atualizações e você pode correr o risco de estar fazendo mesclagem com uma versão antiga. Digite primeiro `git pull` e depois o comando abaixo:
+`git pull`
+
+Agora podemos mesclar da `textos` para a `master`.
+
+Recomenda-se antes de fazer a mesclagem, puxar as atualizaçãoes que estão no servidor para a sua máquina , pois pode ser que algum outro colega fez atualizações e você pode correr o risco de estar fazendo mesclagem com uma versão antiga. Digite primeiro `git pull` e depois o comando abaixo:
 
 `git merge textos`
 
-Faça agora o git push (como mantenedor, você pode fazer assim)
+-   Faça agora o git push (aqui você pode fazer assim e não pr_push)
 
 `git push`
 
-Agora vá na branch master do Github e verifique se o codigo foi atualizado na master.
+Agora vá na branch master do Github e verifique se o código foi atualizado na master.
 
-Só adicionne os códigos que foram testados e estaão funcionando corretamente.
+Só adicione os códigos que foram testados e estão funcionando corretamente.
 
 ## **Mais um exercício**
 
@@ -261,18 +269,19 @@ Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade qualquer
 
 2.  Crie a sua branch e mude para ela: `git checkout -b sistema-de-login master`
 
-3.  Criie um novo arquivo txt chamado sistema de login
+3.  Crie um novo arquivo txt chamado `sistema de login.txt` e salve-o.
 
-4.  Digite `git add . && git status` e o arquivo ficará pornto para ser adicionado
+4.  Digite `git add . && git status` e o arquivo ficará pronto para ser adicionado
 
 5.  Confirme essas alterações: `git commit -m "Criado sistema de Login"`
 
 6.  Digamos que tudo esteja funcionando e checado o código, volte para a master:
 
-```         
-`git checkout master && git branch`
-```
+    `git checkout master && git branch`
 
+```{=html}
+<!-- -->
+```
 7.  Atualize o código da master: `git pull`
 
 8.  Agora sim, você pode mesclar: `git merge sistema-de-login master`
@@ -283,11 +292,11 @@ Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade qualquer
 
 # **Criando um Pull Request**
 
-Em alguns casos, só vamos conseguir unir códigos de fizeros uma requisição para uma pessoa responsável pelo repositório atarave´s do processo chamado Pull request. Vamos imaginar que você queira fazer alterações via a branch sistema-de-login
+Em alguns casos, só vamos conseguir unir códigos de fizermos uma requisição para uma pessoa responsável pelo repositório através do processo chamado `Pull request`. Vamos imaginar que você queira fazer alterações via a branch sistema-de-login.
 
-1.  Vamos entrar na nossa master, fazeer pull e depois mudar para a branch sistema-de-login: `git checkout sistema-de-login`
+1.  Vamos entrar na nossa master `(git checkout master)`, fazer `git pull` e depois mudar para a branch sistema-de-login: `git checkout sistema-de-login`
 
-2.  Altere o arquivo sistema de login.txt acrescenta a linha: Digite sua idade e salve
+2.  Altere o arquivo `sistema de login.txt` acrescenta a linha: "Digite sua idade**"** e salve o arquivo.
 
 3.  Adicione : `git add . && git status`
 
@@ -307,11 +316,13 @@ Em alguns casos, só vamos conseguir unir códigos de fizeros uma requisição p
 
 # **Apagando a ultima modificação**
 
-1.  Digite git reflog e veja qual a referência anterior a essa modificação
+Caso aconteça algum erro, é possível voltar a momento anterior às modificações (ou até ainda um prévio a este se os conflitos forem grandes, mas **tenha muito cuidado em resetar commits mais antigos**). Observamos que esta parte de rever mudanças pode não ser tão necessária, pois usamos poucos linhass de códigos. Mesmo assim, vamos ver algumas funções básicas , caso precise. Primeiro vemos o histórico de atualizações.
 
-2.  Para retornar, digite : git reset --hard 7d0932f
+1.  Digite `git reflog` no terminal e veja qual o identificador do commit (hash do commit, um número alfanumérico com 8 caracteres) anterior a essa modificação
 
-3.  Caso vc se arrependa desse eliminação, você pode fazer um git reflog e digitar o numero de identificação da modificação final: git reset --hard 5a6cc0a
+2.  Para resetar a mudança, digite o comando seguinte acompanhado do identificador anterior : `git reset --hard 7d0932f`
+
+3.  Caso vc se arrependa dessa eliminação, você pode voltar atrás, fazendo um `git reflog` e digitar o numero de identificação da modificação que se arrependeu de apagar: `git reset --hard 5a6cc0a`
 
 4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github Completo 2023 para mais esclarecimentos.
 

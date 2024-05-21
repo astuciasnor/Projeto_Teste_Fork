@@ -83,11 +83,20 @@ GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba
 ![](images/clipboard-3984491672.png){width="376"}
 
 5.  Em seguida, no RStudio, você pode criar um novo Projeto com Versionamento indo em `File–> New projec`t e escolha a opção de `Version Control –> Git` e coloque a **url** do repositório e especifique a pasta onde será salvo o repositório.
+
 6.  Ao fazer desta maneira, seu respositório já foi vinculada ao git do seu computador e, obviamente, está pareado com o Github na internet.
 
-## Criando no seu proprio computador primeiro
+    **Implemente pequenas mudanças no seu projeto:**
 
-Não é forma mais recomendada, mas é possível fazer assim.
+7.  Faça pequenos testes de alteração no seu repositório testes, como: criar e pasta e arquivo, salvar na pasta do projeto, comitar por meio da aba git, realizar push.
+
+8.  Verifique no servidor do Github as alterações
+
+9.  Faça alteração no arquivo Readme, commit e depois fazer Pull no RStudio.
+
+## Criando no seu próprio computador primeiro
+
+Não é forma mais recomendada, mas é possível criar repositório pareado com o Github da sequinte maneira:
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::create_project(path = "D:/Git/Clube_Codigo/Nome_Projeto")
@@ -95,11 +104,11 @@ usethis::use_git()    # Digite no console desse projeto para ligá-lo ao Git
 usethis::use_github() # Digite no console desse projeto para levá-lo ao Github
 ```
 
-Você também pode partir de um projeto já existem em seu computador e depois usar as duas útlimas linhas de comando acima para ligá-lo ao git e carregá-lo ao Github.
+Você também pode partir de um `Projeto já existem em seu computador`. Abra o projeto e depois use as duas útlimas linhas de comando acima para ligá-lo ao git e carregá-lo ao Github.
 
 ## Clonando e bifurcando um respositório (fork)
 
-Quando queremos trabalhar em colaboração com mais uma ou duas pessoas, podemos clonar um respositório e bifurcar esse repositório. Para isso, utilize os comandos abaixo.
+Quando queremos trabalhar em colaboração com mais de uma ou duas pessoas, podemos clonar um respositório e bifurcá-lo ao mesmo tempo. Para isso, utilize os comandos abaixo.
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::create_from_github(
@@ -108,39 +117,41 @@ usethis::create_from_github(
   fork = TRUE)
 ```
 
-### Inclua pastas e arquivos no gitignore
+## Inclua pastas e arquivos no arquivo .gitignore
 
-Geralemente precisamos que arquivos e pastas não sejam compartilhados. Para isso insira as pastas e arquivos no arquivo `gitignore`. Verifique neste Projeto_Teste_Fork quais pastas e arquivos não são compartilhados.
+Geralmente precisamos que arquivos e pastas não sejam compartilhados/divulgados. Para isso, insira as pastas e arquivos no arquivo .`gitignore`. Verifique neste Projeto_Teste_Fork quais pastas e arquivos não são compartilhados.
 
 # Contribuindo com o Projeto de Análise
 
-Após ter criado um repositório a partir do Github e com a opção de fork (Bifurcamento), você querer melhorar ainda mais o código desse projeto de análise. Siga os passo abaixo para inserir as suas linhas de código, seja em arquivos \*.R, \*.Rmd, \*.qmd, \*.csv, \*xlsx, ou quais outros arquivos editáveis, ou inserir outros não editáveis dentro do projeto. Siga os procedimentos abaixo:
+Após ter criado um repositório a partir localizado no Github e com a opção de fork (Bifurcamento), você querer melhorar ainda mais o código desse projeto de análise. Siga os passo abaixo para inserir as suas linhas de código, seja em arquivos `*.R`, `*.Rmd`, `*.qmd`, `*.csv`, `*xlsx`, ou quais outros arquivos editáveis, ou inserir outros não editáveis dentro do projeto.
 
-1.  **Sempre** crie uma ramificação (**branch**) - A criação de branch é recomendada antes de mecher em qualquer arquivo do projeto. É importante você está na branch principal (main ou master) e use o comando abaixo no consolo e colocando o nome que deseja como branch.
+1.  **Sempre** crie uma ramificação (**branch**) - A criação de branch é recomendada antes de alterar qualquer arquivo do projeto. É importante você esteja na branch principal (master) e use o comando abaixo no console e dando nome apropriado à branch que reflita as modificações que deseja implementar.
 
 ```{r, echo = TRUE, eval = FALSE}
 pr_init(branch = "ajuda_grafico1")
 ```
 
-2.  Agora você pode começar a fazer as contribuições nos arquivos desejados ou mesmo criar novos arquivos e pastas. Vamos fazer sua contribuição incluindo seu nome e e-mail no arquivo Readme.Rmd (Tabela abaixo). Depois renderize (aperte no botão Knit)
+2.  Agora, você pode começar a fazer as contribuições nos arquivos desejados ou mesmo criar novos arquivos e pastas. Faça uma pequena modificação no arquivo Readme.Rmd (Tabela abaixo), incluindo seu nome e e-mail . Depois renderize (aperte no botão Knit).
 
-3.  Após términos das suas alterações, realize o commit (na aba git) e NÃO o PUSH, o qual deve ser feito via a função **`usethis::pr_push()`** no console e dê enter.
+3.  Após término das suas alterações, realize o `Commit` (Botão na aba git)
+
+4.  NÃO pressione o botão [**Push**]{style="color: lightgreen;"} agora. A operação de "empurrar" deve feita via digitação da função **`usethis::pr_push()`** no console, seguida de Enter, a fim de criar uma Pull Request também.
 
     ```{r, echo = TRUE, eval = FALSE}
     usethis::pr_push()
     ```
 
-4.  A página do Github se abrirá para que você possa completar o `Pull Request (PR)`
+5.  A página do Github se abrirá para que você possa completar o `Pull Request (PR)`
 
-5.  Então comente as mudanças as mudanças que fez e clique em Criar Requerimento Pull (Create Pull Request)
+6.  Então comente as mudanças que fez e clique em `Criar Requerimento Pull` (ou `Create Pull Request`)
 
-6.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você finalizar sua contribuição, fechando a brunch no Rstudio
+7.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você finaliza sua contribuição, fechando a brunch no Rstudio
 
-7.  A mesclagem, a qual é feita pelo mantenedor do projeto, pode ser feita pelo Github. Após mescalar, mantenedor pode inclusive fazer alterações nas suas próprias e fazer um novo commit
+    **Obs1:** Quanto ao mantenedor, a mesclagem do projeto pode ser feita pelo Github. Após mescalar com a branch `master`, o mantenedor pode inclusive fazer alterações próprias e fazer um novo commit.
 
-8.  Por sua vez, quando receber um aviso do mantenedor que foi aceita a sua contribuição, volte para a branch `master` , **clique primeiro** no botão `Pull` da aba git para atualizar as contribuições suas e que eventualemente o mantenedor do repositório acrescentou.
+8.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita a sua contribuição, volte para a branch `master` no RStudio, e então **clique primeiro** no botão [**Pull**]{style="color: lightblue;"} da aba git para atualizar as contribuições suas mescladas e outras que eventualmente o mantenedor do repositório acrescentou.
 
-9.  Delete a branch que você criou indo primeiro para essa branch e digitando no console **usethis::pr_finish().**
+9.  Delete a branch que você criou indo primeiro para essa branch via aba `Git` e digitando no console **usethis::pr_finish().**
 
     ```{r, echo = TRUE, eval = FALSE}
     usethis::pr_finish()
@@ -148,7 +159,9 @@ pr_init(branch = "ajuda_grafico1")
 
 10. Pronto, você está com a versão mais atualizada na sua brach principal (master)
 
-11. Como boa prática, sempre comunique o mantenedor de suas modificaçãoes.
+    **Obs2**: Como boa prática, sempre comunique o mantenedor de suas modificaçãoes.
+
+**Cadastre seu nome e endereço de e-mail abaixo:**
 
 | \#  |          Nome           |         e-mail         |
 |:---:|:-----------------------:|:----------------------:|
@@ -244,61 +257,63 @@ Só adicionne os códigos que foram testados e estaão funcionando corretamente.
 
 Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade qualquer
 
-1.   Faça a atualização: `git pull` na master
+1.  Faça a atualização: `git pull` na master
 
-2.   Crie a sua branch e mude para ela: `git checkout -b sistema-de-login master`
+2.  Crie a sua branch e mude para ela: `git checkout -b sistema-de-login master`
 
-3.   Criie um novo arquivo txt chamado sistema de login
+3.  Criie um novo arquivo txt chamado sistema de login
 
-4.   Digite `git add . && git status` e o arquivo ficará pornto para ser adicionado
+4.  Digite `git add . && git status` e o arquivo ficará pornto para ser adicionado
 
-5.   Confirme essas alterações: `git commit -m "Criado sistema de Login"`
+5.  Confirme essas alterações: `git commit -m "Criado sistema de Login"`
 
-6.   Digamos que tudo esteja funcionando e checado o código, volte para a master:
+6.  Digamos que tudo esteja funcionando e checado o código, volte para a master:
 
-    `git checkout master && git branch`
+```         
+`git checkout master && git branch`
+```
 
-7.   Atualize o código da master: `git pull`
+7.  Atualize o código da master: `git pull`
 
-8.   Agora sim, você pode mesclar: `git merge sistema-de-login master`
+8.  Agora sim, você pode mesclar: `git merge sistema-de-login master`
 
-9.   Mande essa alteração para o servidor: `git push`
+9.  Mande essa alteração para o servidor: `git push`
 
-10.  Observe no servidor do github as alterações
+10. Observe no servidor do github as alterações
 
 # **Criando um Pull Request**
 
 Em alguns casos, só vamos conseguir unir códigos de fizeros uma requisição para uma pessoa responsável pelo repositório atarave´s do processo chamado Pull request. Vamos imaginar que você queira fazer alterações via a branch sistema-de-login
 
-1.   Vamos entrar na nossa master, fazeer pull e depois mudar para a branch sistema-de-login: `git checkout sistema-de-login`
+1.  Vamos entrar na nossa master, fazeer pull e depois mudar para a branch sistema-de-login: `git checkout sistema-de-login`
 
-2.   Altere o arquivo sistema de login.txt acrescenta a linha: Digite sua idade e salve
+2.  Altere o arquivo sistema de login.txt acrescenta a linha: Digite sua idade e salve
 
-3.   Adicione : `git add . && git status`
+3.  Adicione : `git add . && git status`
 
-4.   Agora faça commit: `git commit -m "Adicionado idade ao sistema de login"`
+4.  Agora faça commit: `git commit -m "Adicionado idade ao sistema de login"`
 
-5.   Agora, seu código precisa ser mesclado por outro pessoa da equipe. Você faz um push e não mescla nada como feito acima. Digite de dentro da branch modificada: `git push`
+5.  Agora, seu código precisa ser mesclado por outro pessoa da equipe. Você faz um push e não mescla nada como feito acima. Digite de dentro da branch modificada: `git push`
 
-6.   O Sitema vai pedir que digite um novo código: `git push --set-upstream origin sistema-de-login`
+6.  O Sitema vai pedir que digite um novo código: `git push --set-upstream origin sistema-de-login`
 
-7.   Veja página no Github e observará que a aparecer que a branch sistema-de-login foi atualizada recentemente e pede para comparar e fazer Pull Request. Clique em `Compare & Pull Request`
+7.  Veja página no Github e observará que a aparecer que a branch sistema-de-login foi atualizada recentemente e pede para comparar e fazer Pull Request. Clique em `Compare & Pull Request`
 
-8.   O sistema muda para a janela indicando que solicitação de mesclagem vai da branch sistema-de-login para a master
+8.  O sistema muda para a janela indicando que solicitação de mesclagem vai da branch sistema-de-login para a master
 
-9.   Você pode explicar mais em comentários e clique em `Create Pull Request`
+9.  Você pode explicar mais em comentários e clique em `Create Pull Request`
 
-10.  A pessoa que tiver o poder para fazer a revisão e mesclar, pode clicar em `Merge Pull Request`
+10. A pessoa que tiver o poder para fazer a revisão e mesclar, pode clicar em `Merge Pull Request`
 
 # **Apagando a ultima modificação**
 
-1.   Digite git reflog e veja qual a referência anterior a essa modificação
+1.  Digite git reflog e veja qual a referência anterior a essa modificação
 
-2.   Para retornar, digite : git reset --hard 7d0932f
+2.  Para retornar, digite : git reset --hard 7d0932f
 
-3.   Caso vc se arrependa desse eliminação, você pode fazer um git reflog e digitar o numero de identificação da modificação final: git reset --hard 5a6cc0a
+3.  Caso vc se arrependa desse eliminação, você pode fazer um git reflog e digitar o numero de identificação da modificação final: git reset --hard 5a6cc0a
 
-4.   Veja a partir do minuto 23:00 do vídeo Curso de Git e Github Completo 2023 para mais esclarecimentos.
+4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github Completo 2023 para mais esclarecimentos.
 
 ## **Considerações Finais**
 

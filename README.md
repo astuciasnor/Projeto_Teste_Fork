@@ -87,12 +87,25 @@ GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba
     Versionamento indo em `File–> New projec`t e escolha a opção de
     `Version Control –> Git` e coloque a **url** do repositório e
     especifique a pasta onde será salvo o repositório.
+
 6.  Ao fazer desta maneira, seu respositório já foi vinculada ao git do
     seu computador e, obviamente, está pareado com o Github na internet.
 
-## Criando no seu proprio computador primeiro
+    **Implemente pequenas mudanças no seu projeto:**
 
-Não é forma mais recomendada, mas é possível fazer assim.
+7.  Faça pequenos testes de alteração no seu repositório testes, como:
+    criar e pasta e arquivo, salvar na pasta do projeto, comitar por
+    meio da aba git, realizar push.
+
+8.  Verifique no servidor do Github as alterações
+
+9.  Faça alteração no arquivo Readme, commit e depois fazer Pull no
+    RStudio.
+
+## Criando no seu próprio computador primeiro
+
+Não é forma mais recomendada, mas é possível criar repositório pareado
+com o Github da sequinte maneira:
 
 ``` r
 usethis::create_project(path = "D:/Git/Clube_Codigo/Nome_Projeto")
@@ -100,15 +113,15 @@ usethis::use_git()    # Digite no console desse projeto para ligá-lo ao Git
 usethis::use_github() # Digite no console desse projeto para levá-lo ao Github
 ```
 
-Você também pode partir de um projeto já existem em seu computador e
-depois usar as duas útlimas linhas de comando acima para ligá-lo ao git
-e carregá-lo ao Github.
+Você também pode partir de um `Projeto já existem em seu computador`.
+Abra o projeto e depois use as duas útlimas linhas de comando acima para
+ligá-lo ao git e carregá-lo ao Github.
 
 ## Clonando e bifurcando um respositório (fork)
 
-Quando queremos trabalhar em colaboração com mais uma ou duas pessoas,
-podemos clonar um respositório e bifurcar esse repositório. Para isso,
-utilize os comandos abaixo.
+Quando queremos trabalhar em colaboração com mais de uma ou duas
+pessoas, podemos clonar um respositório e bifurcá-lo ao mesmo tempo.
+Para isso, utilize os comandos abaixo.
 
 ``` r
 usethis::create_from_github(
@@ -117,64 +130,73 @@ usethis::create_from_github(
   fork = TRUE)
 ```
 
-### Inclua pastas e arquivos no gitignore
+## Inclua pastas e arquivos no arquivo .gitignore
 
-Geralemente precisamos que arquivos e pastas não sejam compartilhados.
-Para isso insira as pastas e arquivos no arquivo `gitignore`. Verifique
-neste Projeto_Teste_Fork quais pastas e arquivos não são compartilhados.
+Geralmente precisamos que arquivos e pastas não sejam
+compartilhados/divulgados. Para isso, insira as pastas e arquivos no
+arquivo .`gitignore`. Verifique neste Projeto_Teste_Fork quais pastas e
+arquivos não são compartilhados.
 
 # Contribuindo com o Projeto de Análise
 
-Após ter criado um repositório a partir do Github e com a opção de fork
-(Bifurcamento), você querer melhorar ainda mais o código desse projeto
-de análise. Siga os passo abaixo para inserir as suas linhas de código,
-seja em arquivos \*.R, \*.Rmd, \*.qmd, \*.csv, \*xlsx, ou quais outros
-arquivos editáveis, ou inserir outros não editáveis dentro do projeto.
-Siga os procedimentos abaixo:
+Após ter criado um repositório a partir localizado no Github e com a
+opção de fork (Bifurcamento), você querer melhorar ainda mais o código
+desse projeto de análise. Siga os passo abaixo para inserir as suas
+linhas de código, seja em arquivos `*.R`, `*.Rmd`, `*.qmd`, `*.csv`,
+`*xlsx`, ou quais outros arquivos editáveis, ou inserir outros não
+editáveis dentro do projeto.
 
 1.  **Sempre** crie uma ramificação (**branch**) - A criação de branch é
-    recomendada antes de mecher em qualquer arquivo do projeto. É
-    importante você está na branch principal (main ou master) e use o
-    comando abaixo no consolo e colocando o nome que deseja como branch.
+    recomendada antes de alterar qualquer arquivo do projeto. É
+    importante você esteja na branch principal (master) e use o comando
+    abaixo no console e dando nome apropriado à branch que reflita as
+    modificações que deseja implementar.
 
 ``` r
 pr_init(branch = "ajuda_grafico1")
 ```
 
-2.  Agora você pode começar a fazer as contribuições nos arquivos
-    desejados ou mesmo criar novos arquivos e pastas. Vamos fazer sua
-    contribuição incluindo seu nome e e-mail no arquivo Readme.Rmd
-    (Tabela abaixo). Depois renderize (aperte no botão Knit)
+2.  Agora, você pode começar a fazer as contribuições nos arquivos
+    desejados ou mesmo criar novos arquivos e pastas. Faça uma pequena
+    modificação no arquivo Readme.Rmd (Tabela abaixo), incluindo seu
+    nome e e-mail . Depois renderize (aperte no botão Knit).
 
-3.  Após términos das suas alterações, realize o commit (na aba git) e
-    NÃO o PUSH, o qual deve ser feito via a função
-    **`usethis::pr_push()`** no console e dê enter.
+3.  Após término das suas alterações, realize o `Commit` (Botão na aba
+    git)
+
+4.  NÃO pressione o botão
+    <span style="color: lightgreen;">**Push**</span> agora. A operação
+    de “empurrar” deve feita via digitação da função
+    **`usethis::pr_push()`** no console, seguida de Enter, a fim de
+    criar uma Pull Request também.
 
     ``` r
     usethis::pr_push()
     ```
 
-4.  A página do Github se abrirá para que você possa completar o
+5.  A página do Github se abrirá para que você possa completar o
     `Pull Request (PR)`
 
-5.  Então comente as mudanças as mudanças que fez e clique em Criar
-    Requerimento Pull (Create Pull Request)
+6.  Então comente as mudanças que fez e clique em
+    `Criar Requerimento Pull` (ou `Create Pull Request`)
 
-6.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a
+7.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a
     mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você
-    finalizar sua contribuição, fechando a brunch no Rstudio
+    finaliza sua contribuição, fechando a brunch no Rstudio
 
-7.  A mesclagem, a qual é feita pelo mantenedor do projeto, pode ser
-    feita pelo Github. Após mescalar, mantenedor pode inclusive fazer
-    alterações nas suas próprias e fazer um novo commit
+    **Obs1:** Quanto ao mantenedor, a mesclagem do projeto pode ser
+    feita pelo Github. Após mescalar com a branch `master`, o mantenedor
+    pode inclusive fazer alterações próprias e fazer um novo commit.
 
-8.  Por sua vez, quando receber um aviso do mantenedor que foi aceita a
-    sua contribuição, volte para a branch `master` , **clique primeiro**
-    no botão `Pull` da aba git para atualizar as contribuições suas e
-    que eventualemente o mantenedor do repositório acrescentou.
+8.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita
+    a sua contribuição, volte para a branch `master` no RStudio, e então
+    **clique primeiro** no botão
+    <span style="color: lightblue;">**Pull**</span> da aba git para
+    atualizar as contribuições suas mescladas e outras que eventualmente
+    o mantenedor do repositório acrescentou.
 
-9.  Delete a branch que você criou indo primeiro para essa branch e
-    digitando no console **usethis::pr_finish().**
+9.  Delete a branch que você criou indo primeiro para essa branch via
+    aba `Git` e digitando no console **usethis::pr_finish().**
 
     ``` r
     usethis::pr_finish()
@@ -183,8 +205,10 @@ pr_init(branch = "ajuda_grafico1")
 10. Pronto, você está com a versão mais atualizada na sua brach
     principal (master)
 
-11. Como boa prática, sempre comunique o mantenedor de suas
+    **Obs2**: Como boa prática, sempre comunique o mantenedor de suas
     modificaçãoes.
+
+**Cadastre seu nome e endereço de e-mail abaixo:**
 
 | \#  |          Nome           |        e-mail         |
 |:---:|:-----------------------:|:---------------------:|

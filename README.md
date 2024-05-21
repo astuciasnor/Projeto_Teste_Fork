@@ -352,8 +352,6 @@ qualquer
 
     `git checkout master && git branch`
 
-<!-- -->
-
 7.  Atualize o código da master: `git pull`
 
 8.  Agora sim, você pode mesclar: `git merge sistema-de-login master`
@@ -366,7 +364,7 @@ qualquer
 
 Em alguns casos, só vamos conseguir unir códigos de fizermos uma
 requisição para uma pessoa responsável pelo repositório através do
-processo chamado `Pull request`. Vamos imaginar que você queira fazer
+processo chamado Pull request. Vamos imaginar que você queira fazer
 alterações via a branch sistema-de-login.
 
 1.  Vamos entrar na nossa master `(git checkout master)`, fazer
@@ -392,8 +390,8 @@ alterações via a branch sistema-de-login.
     sistema-de-login foi atualizada recentemente e pede para comparar e
     fazer Pull Request. Clique em `Compare & Pull Request`
 
-8.  O sistema muda para a janela indicando que solicitação de mesclagem
-    vai da branch sistema-de-login para a master
+8.  O sistema muda para a janela indicando que a solicitação de
+    mesclagem vai da branch sistema-de-login para a master
 
 9.  Você pode explicar mais em comentários e clique em
     `Create Pull Request`
@@ -401,7 +399,7 @@ alterações via a branch sistema-de-login.
 10. A pessoa que tiver o poder para fazer a revisão e mesclar, pode
     clicar em `Merge Pull Request`
 
-# **Apagando a ultima modificação**
+# **Apagando a última modificação**
 
 Caso aconteça algum erro, é possível voltar a momento anterior às
 modificações (ou até ainda um prévio a este se os conflitos forem
@@ -432,6 +430,10 @@ atualizações.
 
 - **Resetar para um estado anterior:** Reescreve a história do
   repositório, removendo commits subsequentes.
+
+- **Toda vez que fizer um commit, tem que fazer `git push` ou
+  `pr_push()`** antes de fazer novas alterações, para evitar a mensagem
+  de commit a frente das modificações.
 
 # Mais informações
 
@@ -480,4 +482,3 @@ Você também pode incorporar gráficos, por exemplo:
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
-zzzzzzzzzzz

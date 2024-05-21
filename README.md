@@ -431,14 +431,9 @@ atualizações.
 - **Resetar para um estado anterior:** Reescreve a história do
   repositório, removendo commits subsequentes.
 
-<<<<<<< HEAD
 - **Toda vez que fizer um commit, tem que fazer `git push` ou
   `pr_push()`** antes de fazer novas alterações, para evitar a mensagem
   de commit a frente das modificações.
-=======
-- Toda vez que fizer um commit, tem que fazer `git push` ou `pr_push()`
-  antes de fazer novas alterações, para evitar a mensagem
->>>>>>> 8ba1b6f357e5edbde3d8050e6b7e52c10be32cba
 
 # Mais informações
 
@@ -485,10 +480,9 @@ Você também pode incorporar gráficos, por exemplo:
 
 ![](README_files/figure-gfm/pressure-1.png)<!-- -->
 
-<<<<<<< HEAD
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
-=======
-Nesse caso, não se esqueça de fazer o commit e enviar (botão Push) os
-arquivos da figura resultantes para que eles sejam exibidos no GitHub.
->>>>>>> 8ba1b6f357e5edbde3d8050e6b7e52c10be32cba
+
+Acrescento 1 linha ———————
+
+Acescento outra linha —————–

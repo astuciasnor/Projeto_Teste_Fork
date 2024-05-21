@@ -246,10 +246,8 @@ terminal:
 `git reflog`
 
 A aparecerá uma lista de todos os commits (versionamentos) que você já
-fez no projeto.
-
-Vamos agora exercitar o que já fizemos com as funções do pacote usethis
-e também com funções do git.
+fez no projeto. Vamos agora exercitar o que já fizemos com as funções do
+pacote usethis e também com funções do git.
 
 ## **Criação de Branches e Commits**
 

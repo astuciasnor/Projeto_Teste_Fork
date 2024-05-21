@@ -259,22 +259,12 @@ Verifique se ela foi criado com o comando
 
 `git branch`
 
-\<\<\<\<\<\<\< HEAD Mude agora para a branch em que deseja trabalhar.
-Digite os seguintes comando: ======= - Mude agora para a branch em que
-deseja trabalhar. Digite os seguintes comando: \>\>\>\>\>\>\>
-daf2003430c6fb163c3b14d6132d17e042d6d079
+- Mude agora para a branch em que deseja trabalhar. Digite os seguintes
+  comando:
 
 `git checkout textos`
 
 `git branch`
-
-\<\<\<\<\<\<\< HEAD Vamos agora fazer umas alterações pequenas no
-arquvio de texto e salve e feche o arquivo. Digite o seguinte comando
-abaixo para identificar uma modificação:
-
-`git status`
-
-# Adicione a modificação. Mas lembre que a modificaçõa não foi para a branch master
 
 - Vamos agora fazer umas alterações pequenas no arquvio de texto, salvar
   e fechar o arquivo. Digite o seguinte comando abaixo para identificar
@@ -283,8 +273,7 @@ abaixo para identificar uma modificação:
 `git status`
 
 - Adicione a modificação. Mas lembre que a modificaçõa ainda não foi
-  para a branch master \>\>\>\>\>\>\>
-  daf2003430c6fb163c3b14d6132d17e042d6d079
+  para a branch master
 
 `git add .`
 

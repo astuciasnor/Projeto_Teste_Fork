@@ -19,15 +19,15 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-O Objetivo do projeto Projeto_Teste_Fork é fornecer informações necessários para usuários inciais e intermediários aprenderem a usar o Git/Github na interface RStudio para usar Controle de Versão de Projetos.
+O Objetivo do projeto Projeto_Teste_Fork é fornecer informações necessários para usuários inciais e intermediários aprenderem a usar o Git/Github na interface RStudio para usar Controle de Versão de Projetos. A primeira parte usa as funções do pacote `usethis,` e a partir da seção *Trabalhando com Versionamento*, usamos os comandos do Git.
 
-# Instruções de uso inicias
+# Instruções Inicias para uso do Git/Github
 
 1.  Crie uma conta gratuita no GitHub <https://github.com/>
 
-2.  Download o Git neste link <https://git-scm.com/downloads>
+2.  Download o arquivo executável do Git neste link <https://git-scm.com/downloads>
 
-3.  Instale o git e depois abra-o. Feche e reinicie o Rstudio para reconhecer o local de instalção
+3.  Instale o git e depois abra-o. Feche e reinicie o Rstudio para reconhecer o local de instalção do Git.
 
 4.  Configurando via Rstudio
 
@@ -39,20 +39,20 @@ library(usethis)
 
 # Configure o Git/Github no RStudio
 
-5.  Vamos usar o pacote `usethis` e os comando abaixo.
+5.  Vamos usar o pacote `usethis` e os comando abaixo para parear com a sua conta no Github. Acesso das de sua conta e e-mail em Configurações –\> Perfil Público.
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::use_git_config(user.name = "Evaldo Martins", 
                         user.email = "evaldomartins@ufpa.br")
 ```
 
-6.  Criar um novo token ou regenerar o token (codigo de 40 dig serão produzido)
+6.  Criar um novo token ou regenerar o token (codigo de 40 dígitos serão produzido)
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::create_github_token() # Muda para o site do github para fazer login
 ```
 
-Depois que fizer login, gere o token na própria página do github e o copie. Após copiar, Você deverá colocar esse número no arquivo .Renviron. O .Renviron é um arquivo de configuração do R que permite que você especifique variáveis de ambiente para que fiquem disponíveis para o R. Ele é muito usado para disponibilizar senhas, chaves de API, etc. - coisas que são secretas - e por isso não é boa prática colocá-las no código.
+Depois que fizer login, gere o token na própria página do github e o copie. Após copiar, Você deverá colocar esse número no arquivo `.Renviron`. O `.Renviron` é um arquivo de configuração do R que permite que você especifique variáveis de ambiente para que fiquem disponíveis para o R. Ele é muito usado para disponibilizar senhas, chaves de API, etc. - coisas que são secretas - e por isso não é boa prática colocá-las no código.
 
 7.  **Abra o o arquivo .Renviron**
 
@@ -64,15 +64,16 @@ usethis::edit_r_environ()
 
 GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba
 
-9)  Após adicionar o token copiado do site, pule uma linha e salve o arquivo. \# 10) Reinicie o RStudio: CTRL + SHIFT + F10
+9)  Após adicionar o token copiado do site, pule uma linha e salve o arquivo.
+10) Reinicie o RStudio: CTRL + SHIFT + F10
 
 # Como criar repositório
 
 ## Criando repositório primeiro no Github
 
-1.  A forma mais eficiente é fazer via o site do Github, pois tudo fica configurado
+1.  A forma mais eficiente de criar repositório é fazer via o site do Github, pois tudo fica configurado
 
-2.  Clique no notão verde New
+2.  Clique no notão verde **New**
 
 3.  Preencha conforme figura abaixo
 
@@ -82,21 +83,23 @@ GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba
 
 ![](images/clipboard-3984491672.png){width="376"}
 
-5.  Em seguida, no RStudio, você pode criar um novo Projeto com Versionamento indo em `File–> New projec`t e escolha a opção de `Version Control –> Git` e coloque a **url** do repositório e especifique a pasta onde será salvo o repositório.
+**Baixando o repositório(Projeto):**
 
-6.  Ao fazer desta maneira, seu respositório já foi vinculada ao git do seu computador e, obviamente, está pareado com o Github na internet.
+5.  Em seguida, no RStudio, você pode criar um novo **Projeto com Versionamento** indo em `File–> New projec`t e escolha a opção de `Version Control –> Git` e coloque a **url** do repositório e especifique a pasta onde este será salvo.
+
+6.  Ao fazer desta maneira, seu respositório já fica vinculado ao git do seu computador e, obviamente, está pareado com o Github na internet.
 
     **Implemente pequenas mudanças no seu projeto:**
 
-7.  Faça pequenos testes de alteração no seu repositório testes, como: criar e pasta e arquivo, salvar na pasta do projeto, comitar por meio da aba git, realizar push.
+7.  Faça pequenos testes de alteração no seu repositório testes, como: *criar pasta e arquivo na pasta do projeto, comitar por meio da aba git, realizar push*.
 
-8.  Verifique no servidor do Github as alterações
+8.  Verifique no servidor do Github as alterações.
 
-9.  Faça alteração no arquivo Readme, commit e depois fazer Pull no RStudio.
+9.  Faça alteração no arquivo Readme no Github web, commit e depois faça Pull no RStudio.
 
-## Criando no seu próprio computador primeiro
+## Criando o Repositório no Computador Primeiro
 
-Não é forma mais recomendada, mas é possível criar repositório pareado com o Github da sequinte maneira:
+Não é a forma mais recomendada, mas é possível criar um repositório pareado com o Github no computador priemeiro da sequinte maneira:
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::create_project(path = "D:/Git/Clube_Codigo/Nome_Projeto")
@@ -104,11 +107,13 @@ usethis::use_git()    # Digite no console desse projeto para ligá-lo ao Git
 usethis::use_github() # Digite no console desse projeto para levá-lo ao Github
 ```
 
+**De um projeto existente no computador:**
+
 Você também pode partir de um `Projeto já existem em seu computador`. Abra o projeto e depois use as duas útlimas linhas de comando acima para ligá-lo ao git e carregá-lo ao Github.
 
 ## Clonando e bifurcando um respositório (fork)
 
-Quando queremos trabalhar em colaboração com mais de uma ou duas pessoas, podemos clonar um respositório e bifurcá-lo ao mesmo tempo. Para isso, utilize os comandos abaixo.
+Quando queremos trabalhar em colaboração com mais pessoas, podemos clonar um respositório e bifurcá-lo ao mesmo tempo. Para isso, utilize os comandos abaixo.
 
 ```{r, echo = TRUE, eval = FALSE}
 usethis::create_from_github(
@@ -147,11 +152,11 @@ pr_init(branch = "ajuda_grafico1")
 
 7.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você finaliza sua contribuição, fechando a brunch no Rstudio
 
-    **Obs1:** Quanto ao mantenedor, a mesclagem do projeto pode ser feita pelo Github. Após mescalar com a branch `master`, o mantenedor pode inclusive fazer alterações próprias e fazer um novo commit.
+    **Obs1:** Quanto ao mantenedor, a mesclagem do projeto pode ser feita pelo Github. Após mesclar com a branch `master`, o mantenedor pode inclusive fazer alterações próprias e fazer um novo commit.
 
 8.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita a sua contribuição, volte para a branch `master` no RStudio, e então **clique primeiro** no botão [**Pull**]{style="color: lightblue;"} da aba git para atualizar as contribuições suas mescladas e outras que eventualmente o mantenedor do repositório acrescentou.
 
-9.  Delete a branch que você criou indo primeiro para essa branch via aba `Git` e digitando no console **usethis::pr_finish().**
+9.  Delete a branch que você criou, voltando a ela via aba `Git` e digitando no console **usethis::pr_finish().**
 
     ```{r, echo = TRUE, eval = FALSE}
     usethis::pr_finish()
@@ -289,7 +294,7 @@ Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade qualquer
 
 # **Criando um Pull Request**
 
-Em alguns casos, só vamos conseguir unir códigos de fizermos uma requisição para uma pessoa responsável pelo repositório através do processo chamado Pull request. Vamos imaginar que você queira fazer alterações via a branch sistema-de-login.
+Em alguns casos, só vamos conseguir unir códigos se fizermos uma requisição para uma pessoa responsável pelo repositório através do processo chamado Pull request. Vamos imaginar que você queira fazer alterações via a branch sistema-de-login.
 
 1.  Vamos entrar na nossa master `(git checkout master)`, fazer `git pull` e depois mudar para a branch sistema-de-login: `git checkout sistema-de-login`
 

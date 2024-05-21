@@ -490,6 +490,3 @@ Acrescento 1 linha ———————
 Acescento outra linha —————–
 
 - Teste para uma alteração de pois de comitat
-
-Acrescento Terceira linha Teste de Commitar uma alateração e depois
-modificar

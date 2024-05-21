@@ -366,3 +366,5 @@ plot(pressure, col = "red", bty = "l", pch = 19,
 ```
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub.
+
+-   Pequena modificação

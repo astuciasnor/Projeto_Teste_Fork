@@ -242,7 +242,7 @@ Ele dá uma mensagem de erro quando criamos uma branch nova. Copie a sugestão d
 
 `git branch`
 
-Agora vamos unir o código. Você vai entrar na branch que vai receber as atualizações, no cado a branch master com os seguintes comandos:
+Agora vamos unir o código. Você vai entrar na branch que vai receber as atualizações, no caso a branch master com os seguintes comandos:
 
 `git checkout master`
 

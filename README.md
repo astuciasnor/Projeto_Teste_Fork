@@ -310,7 +310,7 @@ sugestão de comando e execute novamente.
 `git branch`
 
 Agora vamos unir o código. Você vai entrar na branch que vai receber as
-atualizações, no cado a branch master com os seguintes comandos:
+atualizações, no caso a branch master com os seguintes comandos:
 
 `git checkout master`
 

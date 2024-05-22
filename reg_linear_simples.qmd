@@ -43,7 +43,7 @@ df <- read_csv("dados/biometria.csv")
 Agora vamos fazer o grafico.
 
 ```{r}
-df %>% 
+df |>  
   ggplot(aes(x = `Comprimento (cm)`, y = `Peso (g)`)) +
   geom_point(col="red", size=4, shape = 20) + 
   geom_line(col = "red", linewidth = 2, linetype = "dashed") +

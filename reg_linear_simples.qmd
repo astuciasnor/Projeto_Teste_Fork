@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Regressões Básicas"
 format: html
 editor: visual
 editor_options: 
@@ -15,22 +15,26 @@ library(tidyverse)
 library(readr)
 ```
 
-## Análise de regresão Linear simples
+## Análise de regresão não linear
 
-Vamos fazer uma regressão linear simples com dados de morfometria de uma peixe fictício.
+Vamos fazer uma regressão não linear com dados gerados pelo R.
 
 ```{r}
+set.seed(1024)
 a <- -10:10
-b <- a^2
+b <- a^2 + rnorm(21, sd= 2)
+df <- data.frame(a, b)
 ```
 
 ```{r}
-plot(a, b)
+df |> ggplot(aes(x = a, y = b)) +
+  geom_point() + 
+  geom_smooth()
 ```
 
 ## Criando um grafico com ggplot2
 
-Vamos criar um grafico para fazer alguns testes com github. Primeiro vamos importar conjunto de dados de biometria de peixe.
+Vamos criar um grafico para fazer alguns testes com github. Primeiro vamos importar conjunto de dados de biometria de peixe. Vamos aplicar uma Refressão linear simples
 
 ```{r}
 df <- read_csv("dados/biometria.csv")

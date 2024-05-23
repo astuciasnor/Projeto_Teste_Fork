@@ -472,7 +472,7 @@ de atualizações.
     Obs: veja a partir do minuto 23:00 do vídeo
     `Curso de Git e Github Completo 2023` para mais esclarecimentos.
 
-## **Considerações Finais**
+# **Considerações Finais**
 
 - **Reverter um commit:** Mantém o histórico do commit original e
   adiciona um novo commit que desfaz as mudanças.
@@ -491,8 +491,9 @@ de atualizações.
   opção **`--rebase`**. Isso significa que, ao buscar e integrar as
   mudanças do repositório remoto, suas mudanças locais não commitadas ou
   suas novas alterações serão reaplicadas no topo do histórico do
-  repositório remoto. Isso é bom utilizar quando fazemos reset. **Quando
-  usar o Pull with rebase:**
+  repositório remoto. **Isso é particularmente útil quando fazemos reset
+  para um commit no passado**. Outras situações em que **devemos usar o
+  Pull with rebase:**
 
   - **Manter um histórico de commit limpo e linear**: Ao usar rebase, o
     histórico do commit parece como se todas as mudanças fossem

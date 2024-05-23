@@ -348,7 +348,7 @@ Caso aconteça algum erro, é possível voltar ao momento anterior às modifica�
 
     Obs: veja a partir do minuto 23:00 do vídeo `Curso de Git e Github Completo 2023` para mais esclarecimentos.
 
-## **Considerações Finais**
+# **Considerações Finais**
 
 -   **Reverter um commit:** Mantém o histórico do commit original e adiciona um novo commit que desfaz as mudanças.
 
@@ -356,7 +356,7 @@ Caso aconteça algum erro, é possível voltar ao momento anterior às modifica�
 
 -   **Recomenda-se toda vez que fizer um commit, fazer `git push` ou `pr_push()`** antes de fazer novas alterações, para evitar a mensagem de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado em fazer pull entre seu commit e seu push, pois pode gerar conflito de versões. Tudo para evitar trabalhar em versões não atualizadas.
 
--   O "Pull with rebase" no Git, e especificamente na interface do RStudio, é uma operação que combina o comando **`git pull`** com a opção **`--rebase`**. Isso significa que, ao buscar e integrar as mudanças do repositório remoto, suas mudanças locais não commitadas ou suas novas alterações serão reaplicadas no topo do histórico do repositório remoto. Isso é bom utilizar quando fazemos reset. **Quando usar o Pull with rebase:**
+-   O "Pull with rebase" no Git, e especificamente na interface do RStudio, é uma operação que combina o comando **`git pull`** com a opção **`--rebase`**. Isso significa que, ao buscar e integrar as mudanças do repositório remoto, suas mudanças locais não commitadas ou suas novas alterações serão reaplicadas no topo do histórico do repositório remoto. **Isso é particularmente útil quando fazemos reset para um commit no passado**. Outras situações em que **devemos usar o Pull with rebase:**
 
     -   **Manter um histórico de commit limpo e linear**: Ao usar rebase, o histórico do commit parece como se todas as mudanças fossem aplicadas uma após a outra, sem os commits de merge.
 
@@ -372,12 +372,7 @@ Caso aconteça algum erro, é possível voltar ao momento anterior às modifica�
 
 -   É possível **mover modificações não commitadas para uma nova branch?** Vamos ver os passos necessários para criar uma nova branch, mover suas alterações para essa nova branch e depois commitá-las.
 
-    `git status
-    git checkout -b nova-branch
-    git status
-    git add .
-    git commit -m "Descrição das alterações"
-    git push origin nova-branch`
+    `git status git checkout -b nova-branch git status git add . git commit -m "Descrição das alterações" git push origin nova-branch`
 
 # Mais informações
 

@@ -324,7 +324,7 @@ Caso aconteça algum erro, é possível voltar a momento anterior às modificaç
 
     **Obs:** Caso vc se arrependa dessa eliminação, você pode voltar atrás, fazendo um `git reflog` e digitar o numero de identificação da modificação que se arrependeu de apagar: `git reset --hard 5a6cc0a`
 
-3.  Mas se vc quer continuar com a modificação, você precisará que o histórico local do seu repositório não fique atrás do histórico remoto. Você deve forçar que o histórico remoto seja igual ao local (o que pode sobrescrever alterações remotas, para isso tenha certeza da modificação). Você deve usar o comando \
+3.  Mas se vc quer continuar com a modificação, você precisará que o histórico local do seu repositório não fique atrás do histórico remoto. Você deve forçar que o histórico remoto seja igual ao local (o que pode sobrescrever alterações remotas, para isso tenha certeza da modificação). Você deve usar o comando\
     \
     **`git push --force`**
 
@@ -373,3 +373,5 @@ plot(pressure, col = "red", bty = "l", pch = 19,
 ```
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos de figura resultantes para que eles sejam exibidos no GitHub.
+
+xxxxxxxxxxxxxxxxxxxxxxxx

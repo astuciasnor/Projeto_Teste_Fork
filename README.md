@@ -424,9 +424,18 @@ atualizações.
 2.  Para resetar a mudança, digite o comando seguinte acompanhado do
     identificador anterior : `git reset --hard 7d0932f`
 
-3.  Caso vc se arrependa dessa eliminação, você pode voltar atrás,
-    fazendo um `git reflog` e digitar o numero de identificação da
-    modificação que se arrependeu de apagar: `git reset --hard 5a6cc0a`
+    **Obs:** Caso vc se arrependa dessa eliminação, você pode voltar
+    atrás, fazendo um `git reflog` e digitar o numero de identificação
+    da modificação que se arrependeu de apagar:
+    `git reset --hard 5a6cc0a`
+
+3.  Mas se vc quer continuar com a modificação, você precisará que o
+    histórico local do seu repositório não fique atrás do histórico
+    remoto. Você deve forçar que o histórico remoto seja igual ao local
+    (o que pode sobrescrever alterações remotas, para isso tenha certeza
+    da modificação). Você deve usar o comando  
+      
+    **`git push --force`**
 
 4.  Veja a partir do minuto 23:00 do vídeo Curso de Git e Github
     Completo 2023 para mais esclarecimentos.

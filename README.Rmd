@@ -356,15 +356,13 @@ Caso aconteça algum erro, é possível voltar ao momento anterior às modifica�
 
 -   **Recomenda-se toda vez que fizer um commit, fazer `git push` ou `pr_push()`** antes de fazer novas alterações, para evitar a mensagem de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado em fazer pull entre seu commit e seu push, pois pode gerar conflito de versões. Tudo para evitar trabalhar em versões não atualizadas.
 
--   O "Pull with rebase" no Git, e especificamente na interface do RStudio, é uma operação que combina o comando **`git pull`** com a opção **`--rebase`**. Isso significa que, ao buscar e integrar as mudanças do repositório remoto, suas mudanças locais não commitadas ou suas novas alterações serão reaplicadas no topo do histórico do repositório remoto. Isso é bom utilizar quando fazemos reset.
-
--   **Quando usar o Pull with rebase:**
+-   O "Pull with rebase" no Git, e especificamente na interface do RStudio, é uma operação que combina o comando **`git pull`** com a opção **`--rebase`**. Isso significa que, ao buscar e integrar as mudanças do repositório remoto, suas mudanças locais não commitadas ou suas novas alterações serão reaplicadas no topo do histórico do repositório remoto. Isso é bom utilizar quando fazemos reset. **Quando usar o Pull with rebase:**
 
     -   **Manter um histórico de commit limpo e linear**: Ao usar rebase, o histórico do commit parece como se todas as mudanças fossem aplicadas uma após a outra, sem os commits de merge.
 
     -   **Colaborar em um projeto com muitos colaboradores**: Um histórico linear facilita a compreensão do que foi alterado e por quem.
 
--   Se você deseja descartar alterações não commitadas em um arquivo e retornar ao estado do último commit, você pode usar os seguintes comandos no Git:
+-   **Como descartar alterações não commitadas em um arquivo e retornar ao estado do último commit**? Siga os seguintes comandos no Terminal do Git:
 
     `git status`
 

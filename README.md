@@ -491,9 +491,8 @@ de atualizações.
   opção **`--rebase`**. Isso significa que, ao buscar e integrar as
   mudanças do repositório remoto, suas mudanças locais não commitadas ou
   suas novas alterações serão reaplicadas no topo do histórico do
-  repositório remoto. Isso é bom utilizar quando fazemos reset.
-
-- **Quando usar o Pull with rebase:**
+  repositório remoto. Isso é bom utilizar quando fazemos reset. **Quando
+  usar o Pull with rebase:**
 
   - **Manter um histórico de commit limpo e linear**: Ao usar rebase, o
     histórico do commit parece como se todas as mudanças fossem
@@ -502,9 +501,9 @@ de atualizações.
   - **Colaborar em um projeto com muitos colaboradores**: Um histórico
     linear facilita a compreensão do que foi alterado e por quem.
 
-- Se você deseja descartar alterações não commitadas em um arquivo e
-  retornar ao estado do último commit, você pode usar os seguintes
-  comandos no Git:
+- **Como descartar alterações não commitadas em um arquivo e retornar ao
+  estado do último commit**? Siga os seguintes comandos no Terminal do
+  Git:
 
   `git status`
 

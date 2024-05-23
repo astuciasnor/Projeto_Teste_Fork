@@ -437,6 +437,8 @@ alterações via a branch sistema-de-login.
 10. A pessoa que tiver o poder para fazer a revisão e mesclar, pode
     clicar em `Merge Pull Request`
 
+11. Veja acima como apagar um branch pelo terminal.
+
 # **Apagando a última modificação**
 
 Caso aconteça algum erro, é possível voltar ao momento anterior às
@@ -483,6 +485,38 @@ de atualizações.
   de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado
   em fazer pull entre seu commit e seu push, pois pode gerar conflito de
   versões. Tudo para evitar trabalhar em versões não atualizadas.
+
+- O “Pull with rebase” no Git, e especificamente na interface do
+  RStudio, é uma operação que combina o comando **`git pull`** com a
+  opção **`--rebase`**. Isso significa que, ao buscar e integrar as
+  mudanças do repositório remoto, suas mudanças locais não commitadas ou
+  suas novas alterações serão reaplicadas no topo do histórico do
+  repositório remoto. Isso é bom utilizar quando fazemos reset.
+
+- **Quando usar o Pull with rebase:**
+
+  - **Manter um histórico de commit limpo e linear**: Ao usar rebase, o
+    histórico do commit parece como se todas as mudanças fossem
+    aplicadas uma após a outra, sem os commits de merge.
+
+  - **Colaborar em um projeto com muitos colaboradores**: Um histórico
+    linear facilita a compreensão do que foi alterado e por quem.
+
+- Se você deseja descartar alterações não commitadas em um arquivo e
+  retornar ao estado do último commit, você pode usar os seguintes
+  comandos no Git:
+
+  `git status`
+
+  `git checkout -- nome-do-arquivo`
+
+  `git reset HEAD nome-do-arquivo (Para remover alterações no stage)`
+
+- É possível **mover modificações não commitadas para uma nova branch?**
+  Vamos ver os passos necessários para criar uma nova branch, mover suas
+  alterações para essa nova branch e depois commitá-las.
+
+  `git status git checkout -b nova-branch git status git add . git commit -m "Descrição das alterações" git push origin nova-branch`
 
 # Mais informações
 

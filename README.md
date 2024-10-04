@@ -566,3 +566,5 @@ Você também pode incorporar gráficos, por exemplo:
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
+
+Só adiconando um texto em 04/10/2024

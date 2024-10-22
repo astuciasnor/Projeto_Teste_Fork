@@ -29,6 +29,7 @@ do Git.
 
 ``` r
 library(usethis)
+#> Warning: package 'usethis' was built under R version 4.3.3
 ```
 
 # Configure o Git/Github no RStudio
@@ -233,7 +234,7 @@ usethis::pr_init(branch = "ajuda_grafico1")
 |  1  |    Evaldo Martins da Silva     |   evaldomartins@ufpa.br   |
 |  2  | Rayane Leticia Furtado Pinheio | rayanefurtado63@gmail.com |
 |  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1@gmail.com  |
-|  4  |                                |                           |
+|  4  |          Elton Correa          |    eltonpesc@gmail.com    |
 |  5  |                                |                           |
 |  6  |                                |                           |
 |  7  |                                |                           |

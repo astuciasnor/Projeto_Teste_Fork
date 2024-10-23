@@ -259,8 +259,8 @@ Faça as modificações nos arquivos que deseja alterar ou crie novos arquivos e
 |  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1\@gmail.com  |
 |  4  |          Elton Correa          |    eltonpesc\@gmail.com    |
 |  5  |          Texto Rayane          |                            |
-|  6  |          Teste thayan          |                            |
-|  7  |          Texto Evaldo          |                            |
+|     |                                |                            |
+|     |                                |                            |
 
 : Lista de Colaboradores do Projeto (Repositório).
 

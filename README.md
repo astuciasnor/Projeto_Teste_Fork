@@ -288,68 +288,209 @@ Neste comando:
   repositório original no seu próprio GitHub, permitindo que você
   trabalhe de forma independente no projeto.
 
-# Contribuindo com um Projeto de Análise
+# **Contribuindo com um Projeto de Análise**
 
-## Passo a passo de como fazer modificações
+## **Passo a Passo para Fazer Modificações**
 
-Após ter criado uma cópia do repositório a partir do Github remoto
-usando a opção de fork (Bifurcamento), você pode querer melhorar o
-código desse projeto de análise. Siga os passo abaixo para inserir as
-suas linhas de código, seja em arquivos `*.R`, `*.Rmd`, `*.qmd`,
-`*.csv`, `*xlsx`, ou quaisquer outros arquivos editáveis, ou inserir
-outros não editáveis dentro das pasta do projeto.
+Após ter criado uma cópia do repositório (fork) a partir do GitHub
+remoto, você pode querer melhorar o código desse projeto de análise.
+Siga os passos abaixo para inserir suas alterações em arquivos editáveis
+como `.R`, `.Rmd`, `.qmd`, `.csv`, `.xlsx`, ou até mesmo adicionar
+arquivos não editáveis às pastas do projeto.
 
-1.  **Primeiro, sempre** crie um galho ou ramificação (**branch**) - A
-    criação de branch é recomendada antes de alterar qualquer arquivo do
-    projeto em que você pretende contribuir. É importante que você
-    esteja na branch principal (master) e use o comando abaixo no
-    console, dando nome apropriado à branch que reflita as modificações
-    que deseja implementar.
+### **1. Criando uma Ramificação (Branch)**
 
-2.  Depois, comece a fazer as contribuições nos arquivos desejados ou
-    mesmo criar novos arquivos e pastas. Você fará pequenas pequenas
-    modificação no arquivo Readme.Rmd, mais especificamente na Tabela
-    abaixo, incluindo seu nome e e-mail. Depois renderize (aperte no
-    botão `Knit`) para concluir a produção, também, do arquivo
-    `Readme.md`.
+Antes de alterar qualquer arquivo, crie uma nova branch (ramificação). A
+criação de uma branch é recomendada para isolar suas modificações do
+código principal. Primeiro, certifique-se de estar na branch principal
+(master) e crie uma nova branch para suas alterações:
 
-3.  Após término das suas alterações, realize o `Commit` com os comando
-    do git mais abaixo e o faça o `push` para as modificaçãoes irem para
-    o repositório do Github. Siga procedimentos mais abaixo
+``` bash
+git branch nome-da-branch
+git checkout nome-da-branch
+```
 
-4.  A página do Github se abrirá para que você possa completae o
-    `Pull Request (PR)`
+Dê um nome apropriado à branch que reflita as mudanças que você deseja
+implementar.
 
-5.  Então comente as mudanças que fez e clique em
-    `Criar Requerimento Pull` (ou `Create Pull Request`)
+### **2. Fazendo as Alterações**
 
-6.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a
-    mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você
-    finaliza sua contribuição, fechando a brunch no Rstudio
+Faça as modificações nos arquivos que deseja alterar ou crie novos
+arquivos e pastas. Como exemplo, faça pequenas alterações no arquivo
+`Readme.Rmd`, como adicionar seu nome e e-mail à tabela de
+colaboradores. Depois, renderize o arquivo clicando em **Knit**, o que
+também atualizará o `Readme.md`.
 
-    **Obs1:** Quanto ao mantenedor, a mesclagem da branch de
-    modificações com a branch master do projeto pode ser feita no
-    Github. Após mesclar com a branch `master`, o mantenedor pode
-    inclusive fazer pequenas alterações nas linhas de código recém
-    mescladas e incluir um novo `Commit` e `Push`.
+**Cadastre seu nome e endereço de e-mail abaixo:**
 
-7.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita
-    a sua contribuição, o (a) colaborador(a) deve voltar para a branch
-    `master` no RStudio, e então realizar o
-    <span style="color: lightblue;">**Pull**</span> para atualizar as
-    contribuições suas mescladas e outras que eventualmente o mantenedor
-    do repositório acrescentou.
+| \#  |              Nome              |          e-mail           |
+|:---:|:------------------------------:|:-------------------------:|
+|  1  |    Evaldo Martins da Silva     |   evaldomartins@ufpa.br   |
+|  2  | Rayane Leticia Furtado Pinheio | rayanefurtado63@gmail.com |
+|  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1@gmail.com  |
+|  4  |          Elton Correa          |    eltonpesc@gmail.com    |
+|  5  |          Texto Rayane          |                           |
+|  6  |          Teste thayan          |                           |
+|  7  |          Texto Evaldo          |                           |
 
-8.  Volte à branch que você criou e delete-a usando os comando abaixo no
-    terminal
+Lista de Colaboradores do Projeto (Repositório).
 
-9.  Apague a branch no seu computador e no Github
+### **3. Realizando o Commit e Push**
 
-10. Pronto, você está com a versão mais atualizada na sua brach
-    principal (master)
+Após concluir as alterações, siga os procedimentos abaixo para enviar
+suas mudanças ao GitHub:
 
-    **Obs2**: Como boa prática, sempre comunique o mantenedor de suas
-    modificaçãoes.
+``` bash
+
+git add .
+git commit -m "Descrição das alterações"
+git push --set-upstream origin nome-da-branch
+```
+
+### **4. Criando um Pull Request (PR)**
+
+Depois do push, acesse o GitHub, onde será exibida uma opção para criar
+um Pull Request. Descreva suas mudanças e clique em **Create Pull
+Request**. Aguarde o mantenedor do projeto revisar e mesclar suas
+alterações.
+
+### **5. Atualizando e Deletando a Branch**
+
+Após a mesclagem, retorne à branch `master` no RStudio e execute um
+`pull` para atualizar sua cópia local com as alterações feitas pelo
+mantenedor:
+
+``` bash
+git checkout master
+git pull
+```
+
+Agora, você pode excluir a branch local e remota:
+
+``` bash
+git branch -d nome-da-branch
+git push origin --delete nome-da-branch
+```
+
+## **Trabalhando com Versionamento no Terminal**
+
+Esta etapa é valida caso você seja proprietário do repositório. Vamos
+utilizar o terminal do RStudio para trabalhar de forma mais profissional
+com o Git.
+
+### **Verificando o Histórico de Atualizações**
+
+Certifique-se de que você está no diretório correto:
+
+``` r
+getwd()
+```
+
+Agora, visualize o histórico de commits:
+
+``` bash
+git reflog
+```
+
+### **Criação de Branches e Commits**
+
+Para listar as branches locais e verificar em qual você está
+trabalhando, utilize:
+
+``` bash
+git branch
+```
+
+Agora, crie uma nova branch para realizar as alterações:
+
+``` bash
+git branch nome-da-branch
+git checkout nome-da-branch
+```
+
+Após realizar as modificações, adicione-as ao controle de versão e faça
+o commit:
+
+``` bash
+git add .
+git commit -m "Descrição das alterações"
+git push --set-upstream origin nome-da-branch
+```
+
+### **Mesclando as Branches**
+
+Após as modificações, é hora de mesclar a branch criada com a branch
+principal (`master`):
+
+1.  Volte para a branch `master`:
+
+``` bash
+git checkout master
+```
+
+2.  Faça um `pull` para garantir que a branch `master` está atualizada:
+
+``` bash
+git pull
+```
+
+3.  Mescle a branch criada com a `master`:
+
+``` bash
+git merge nome-da-branch
+```
+
+4.  Envie as alterações para o GitHub:
+
+``` bash
+git push
+```
+
+### **Apagando Branches**
+
+Após a mesclagem, é possível apagar a branch local e a branch remota:
+
+``` bash
+git branch -d nome-da-branch
+git push origin --delete nome-da-branch
+```
+
+# **Criando um Pull Request**
+
+Se você não for o mantenedor, deve fazer um Pull Request para solicitar
+a mesclagem de suas mudanças com a branch principal do projeto. Execute
+os seguintes passos:
+
+1.  Entre na branch `master`, faça um `pull` e depois mude para a branch
+    que você deseja solicitar o Pull Request:
+
+``` bash
+git checkout master
+git pull
+git checkout nome-da-branch
+```
+
+2.  Faça suas alterações, adicione e comite as modificações:
+
+``` bash
+git add .
+git commit -m "Descrição das alterações"
+```
+
+3.  Envie suas alterações ao GitHub e crie um Pull Request:
+
+``` bash
+git push
+```
+
+4.  No GitHub, clique em **Compare & Pull Request**, descreva suas
+    mudanças e clique em **Create Pull Request**.
+5.  Após a mesclagem, passe as seguinte etpas:
+
+- Mude para a master
+- Faça pull
+- Delete a branch no computador
+- Delee a branch no Github
 
 ## **Trabalhando com versionamento no Terminal**
 

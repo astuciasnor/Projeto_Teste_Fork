@@ -289,7 +289,7 @@ salve-o (Renderize que você já vai salvar), e depois feche-o.
 |  4  |          Elton Correa          |    eltonpesc@gmail.com    |
 |  5  |                                |                           |
 |  6  |                                |                           |
-|  7  |                                |                           |
+|  7  |          Texto Evaldo          |                           |
 
 Lista de Colaboradores do Projeto (Repositório).
 

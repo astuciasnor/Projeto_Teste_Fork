@@ -25,9 +25,9 @@ O **Projeto Teste Fork** tem como objetivo fornecer orientações práticas para
 
 # Instruções Inicias para uso do Git/Github
 
-1.  Crie uma conta gratuita no GitHub <https://github.com/>
+1.  Crie uma conta gratuita no GitHub em: <https://github.com/>
 
-2.  Descarregue o arquivo executável do Git neste link <https://git-scm.com/downloads>
+2.  Baixe e instale o Git a partir do link: <https://git-scm.com/downloads>
 
 3.  Instale o Git e depois abra e feche o Git Bash ao fim da instalação. Feche e reinicie o Rstudio para reconhecer o local de instalação do Git (Normalmente, fica em *C:/Program Files/Git/bin/git.exe*).
 
@@ -37,65 +37,136 @@ O **Projeto Teste Fork** tem como objetivo fornecer orientações práticas para
 library(usethis)
 ```
 
-# Configurando o Git/Github no RStudio
+# **Configurando o Git/GitHub no RStudio**
 
-5.  Vamos usar o pacote `usethis` e os comando abaixo para parear com a sua conta remota no Github. Acesse o nome da sua conta e e-mail em Configurações –\> Perfil Público (Settings).
+Utilizaremos o pacote `usethis` para integrar o Git ao GitHub. Você precisará das suas credenciais do GitHub (nome de usuário e e-mail), que podem ser encontradas em **Configurações → Perfil Público** no GitHub.
 
 ```{r, echo = TRUE, eval = FALSE}
+# Configurar o Git com nome de usuário e e-mail
 usethis::use_git_config(user.name = "Seu Nome", 
                         user.email = "seu.email@exemplo.com")
 ```
 
-6.  Criar um novo token ou regenerar o token (codigo de 40 dígitos serão produzido)
+## Criando e Configurando um Token de Acesso (PAT)
+
+1.  Para autenticar o GitHub no RStudio, você precisará criar ou regenerar um token de acesso pessoal (PAT). Para isso, execute o comando abaixo:
 
 ```{r, echo = TRUE, eval = FALSE}
-usethis::create_github_token() # Muda para o site do Github para fazer login
+# Criar um token GitHub
+usethis::create_github_token()
 ```
 
-Depois de fazer login, gere o token na própria página do Github e o copie o número. Você deverá colocar esse número no arquivo `.Renviron`. O `.Renviron` é um arquivo de configuração do R que permite que você especifique variáveis de ambiente para que fiquem disponíveis para o R. Ele é muito usado para disponibilizar senhas, chaves de API, etc. - coisas que são secretas - e por isso não é boa prática colocá-las no código. Então execute o seguinte comando:
-
-7.  **Abra o arquivo .Renviron**
+2.  O comando acima abrirá o site do GitHub, onde você fará login e gerará o token (um código de 40 dígitos). Copie esse token.
+3.  Em seguida, adicione o token ao arquivo `.Renviron`, que armazena variáveis de ambiente no R. Isso garante que o token fique disponível, mas protegido.
 
 ```{r, echo = TRUE, eval = FALSE}
+# Abrir o arquivo .Renviron
 usethis::edit_r_environ()
 ```
 
-8.  Crie uma nova linha nesse arquivo, digitando primeiramente : GITHUB_PAT=SEU_TOKEN. Exemplo:
+4.  No arquivo `.Renviron`, crie uma nova linha para armazenar o token:
 
 `GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba`
 
-9)  Após adicionar o token copiado do site, pule uma linha e salve o arquivo.
-10) Reinicie o RStudio: CTRL + SHIFT + F10
+5.  Após adicionar o token copiado do site, acrescente uma linha e salve o arquivo.
+
+6.  Após configurar o token, reinicie o RStudio com o atalho:
+
+    `CTRL + SHIFT + F10`
+
+Esse processo configura o Git e o GitHub para uso direto no RStudio, possibilitando versionamento eficiente e integração com o GitHub para controle de versão de seus projetos.
 
 # Como criar repositório
 
 ## Criando repositório primeiro no Github
 
-1.  A forma mais eficiente de criar repositório é fazer via o site do Github, pois tudo fica devidamente configurado
+A maneira mais eficiente de criar um novo repositório é diretamente pelo site do GitHub, pois isso garante que todas as configurações sejam corretamente definidas desde o início.
 
-2.  Clique no notão verde **New**
+1.  Acesse sua conta no GitHub e clique no botão verde **"New"** no canto superior direito da página para criar um novo repositório.
 
-3.  Preencha as informações conforme figura abaixo
+2.  Defina o nome do repositório, adicione uma descrição (opcional), e escolha se deseja que o repositório seja público ou privado.
+
+3.  Marque a opção **"Add a README file"** para inicializar o repositório com um arquivo README, que você pode editar posteriormente.
+
+4.  Clique no botão **"Create repository"** para finalizar a criação.
+
+5.  Preencha as informações conforme figura abaixo:
 
 ![](images/clipboard-142360520.png){width="637"}
 
-## Clone o repositório em seu computador
+## **Clonando o Repositório no Seu Computador**
 
-1.  Clone o repositório para que seja criado na sua máquina local. Clique no botão verde **Code**. Copie a url do projeto para poder clonar.
+Depois de criar o repositório no GitHub, o próximo passo é clonar o repositório para sua máquina local, criando uma cópia que você poderá modificar diretamente no RStudio.
 
-2.  Em seguida, no RStudio, você pode criar uma cópia desse repositório para trabalhar em **Projeto com Versionamento** indo em `File–> New projec`t e escolha a opção de `Version Control –> Git` e coloque a **url** do repositório e especifique a pasta onde este será salvo.
+1.  No GitHub, acesse a página do repositório recém-criado e clique no botão verde **"Code"**. Em seguida, copie a URL fornecida para clonar o repositório (por exemplo, algo como [`https://github.com/seu-usuario/seu-repositorio.git`](https://github.com/seu-usuario/seu-repositorio.git)).
 
-3.  Ao fazer desta maneira, seu respositório já fica vinculado ao git do seu computador e, obviamente, está pareado com o Github na internet.
+![](images/clipboard-3984491672.png){width="314"}
 
-![](images/clipboard-3984491672.png){width="376"}
+2.  Agora, no RStudio, siga estes passos para criar uma cópia local do repositório e integrá-lo ao seu projeto:
 
-## **Implemente pequenas mudanças no seu projeto de teste**
+-   Vá para **File → New Project**.
+-   Escolha a opção **Version Control**.
+-   Selecione **Git**.
+-   Cole a URL do repositório copiada do GitHub no campo correspondente.
+-   Especifique a pasta onde o projeto será salvo localmente.
 
-1.  Faça pequenos testes de alteração no seu repositório teste, como: *criar pasta e arquivo nesta pasta, comitar (versionar) por meio da aba `git` botão `Commit`, realizar `Push`*`.`
+3.  Após esses passos, o RStudio criará uma cópia completa do seu repositório localmente, já vinculada ao Git e ao GitHub. Isso significa que você poderá gerenciar o versionamento do projeto diretamente, enviando e recebendo alterações entre o repositório local e o GitHub.
 
-2.  Verifique no servidor do Github as suas alterações.
+## **Implementando Pequenas Alterações no Seu Projeto de Teste**
 
-3.  Agora, faça alteração no arquivo `Readme.md` no Github web, commit e depois faça Pull no RStudio. Observe no arquivo se houve a mudança.
+Agora que o repositório está configurado no RStudio, você pode realizar pequenas alterações para testar o controle de versão com Git e GitHub.
+
+1.  **Crie pastas e arquivos:**
+
+    -   No RStudio, crie uma nova pasta e adicione um novo arquivo dentro dessa pasta (por exemplo, um arquivo `.R` ou `.txt`).
+
+2.  **Comitando as alterações:**
+
+    -   Após criar a pasta e o arquivo, vá até a aba **Git** no RStudio e clique no botão **Commit**.
+
+    -   Selecione os arquivos que deseja versionar, adicione uma mensagem explicando a alteração (ex.: "Criação de pasta e arquivo de teste") e clique em **Commit**.
+
+3.  **Realizando o Push:**
+
+    -   Depois de comitar as alterações, clique em **Push** para enviar as modificações para o repositório remoto no GitHub.
+
+4.  **Verificando no GitHub:**
+
+    -   Acesse seu repositório no GitHub e verifique se as mudanças (a nova pasta e arquivo) foram sincronizadas corretamente.
+
+### **Alterando o `README.md` no GitHub e Realizando Pull**
+
+1.  Acesse a página do seu repositório no GitHub.
+
+2.  Abra o arquivo `README.md` diretamente no GitHub e faça uma alteração simples (ex.: adicionar uma linha com "Alteração de teste no GitHub").
+
+3.  Clique em **Commit changes** para salvar a alteração no GitHub.
+
+Agora, volte para o RStudio:
+
+1.  Clique na aba **Git** e, em seguida, em **Pull** para sincronizar as alterações do GitHub com o seu repositório local.
+
+2.  Verifique o arquivo `README.md` no RStudio para confirmar que a alteração feita no GitHub foi aplicada corretamente.
+
+### **Incluindo Pastas e Arquivos no `.gitignore`**
+
+Nem todos os arquivos e pastas precisam ser compartilhados no repositório. Para evitar que certos arquivos sejam versionados, você pode listá-los no arquivo `.gitignore`.
+
+1.  No RStudio, abra ou crie o arquivo `.gitignore` na raiz do projeto.
+
+2.  Insira os nomes dos arquivos e pastas que não devem ser versionados. Por exemplo:
+
+```{bash, echo = TRUE, eval = FALSE}
+# Ignorar arquivos temporários do R
+*.Rhistory
+*.Rdata
+
+# Ignorar diretórios específicos
+/data
+/output
+```
+
+3.  Salve o arquivo e faça um commit dessas alterações. Lembre-se de verificar se os arquivos listados no `.gitignore` estão de fato sendo ignorados ao tentar comitar.
 
 ## Inclua pastas e arquivos no arquivo .gitignore
 
@@ -103,38 +174,60 @@ Geralmente precisamos que arquivos e pastas não sejam compartilhados/divulgados
 
 ## Criando o Repositório no Computador
 
-Não é a forma mais recomendada, mas é possível criar um repositório pareado com o Github, no computador primeiro, da sequinte maneira:
+Embora o método mais recomendado seja criar o repositório diretamente no GitHub e depois cloná-lo no seu computador, também é possível criar um repositório localmente no seu computador e vinculá-lo ao GitHub da seguinte maneira:
 
 ```{r, echo = TRUE, eval = FALSE}
+# Criar um novo projeto e repositório Git localmente
 usethis::create_project(path = "D:/Git/Clube_Codigo/Nome_Projeto")
-usethis::use_git()    # Digite no console desse projeto para ligá-lo ao Git
-usethis::use_github() # Digite no console desse projeto para levá-lo ao Github
+
+# Vincular o projeto ao Git
+usethis::use_git()    
+
+# Enviar o projeto para o GitHub e parear o repositório local
+usethis::use_github()
 ```
 
-**A partir de um projeto existente no computador:**
+Ao usar esse fluxo, o projeto será criado no caminho especificado em seu computador, vinculado ao Git local e, posteriormente, sincronizado com o GitHub.
 
-Você também pode criar a partir de um `Projeto já existem em seu computador`. Primeiro carregue o projeto e depois use as duas útlimas linhas de comando acima para ligá-lo ao Git e carregá-lo ao Github.
+### **A partir de um Projeto Existente no Computador**
 
-# Clonando e bifurcando um respositório (fork)
+Se você já possui um projeto no seu computador e deseja vinculá-lo ao Git e ao GitHub, pode facilmente fazer isso sem criar um novo projeto do zero.
 
-## Fazendo um fork com o usethis
+1.  Abra o projeto existente no RStudio.
 
-Quando queremos trabalhar em colaboração com mais pessoas, podemos não só clonar um respositório, mas também bifurcá-lo ao mesmo tempo. Para isso, utilize os comandos abaixo.
+2.  Em seguida, use os comandos abaixo para vinculá-lo ao Git e sincronizá-lo com o GitHub:
 
 ```{r, echo = TRUE, eval = FALSE}
+# Vincular o projeto existente ao Git
+usethis::use_git()
+
+# Enviar o projeto para o GitHub e criar o repositório remoto
+usethis::use_github()
+```
+
+Esses comandos ligarão seu projeto ao Git, permitindo controle de versão, e o subirão para o GitHub, criando um repositório remoto pareado com o seu projeto local.
+
+# **Clonando e Bifurcando um Repositório (Fork)**
+
+Ao colaborar com outras pessoas em projetos no GitHub, pode ser útil não apenas clonar um repositório, mas também bifurcá-lo (fazer um *fork*). Isso permite que você trabalhe em uma cópia do repositório, mantendo a conexão com o original para futuras contribuições ou atualizações.
+
+Para fazer isso diretamente no RStudio usando o pacote `usethis`, você pode usar o seguinte comando:
+
+```{r, echo = TRUE, eval = FALSE}
+
+# Clonando e bifurcando (fork) o repositório para o seu GitHub
 usethis::create_from_github(
   repo_spec = "https://github.com/Evaldo-Martins-STAT/Projeto_Teste_Fork",
   destdir = "D:/Git/Clube_Codigo/",
-  fork = TRUE)
+  fork = TRUE
+)
 ```
 
-## **Fazendo um Fork do Repositório no GitHub**
+Neste comando:
 
-1.  Acesse o repositório original no GitHub.
-
-2.  Clique no botão **Fork** no canto superior direito para criar uma cópia do repositório em sua conta.
-
-3.  Siga os passos acima para clonar o repositório forkado em seu computador
+-   **`repo_spec`** especifica a URL do repositório no GitHub que você deseja bifurcar.
+-   **`destdir`** define o diretório local onde o repositório será salvo no seu computador.
+-   **`fork = TRUE`** indica que você deseja criar um *fork* do repositório original no seu próprio GitHub, permitindo que você trabalhe de forma independente no projeto.
 
 # Contribuindo com um Projeto de Análise
 

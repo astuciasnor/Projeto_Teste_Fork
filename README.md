@@ -1,7 +1,7 @@
 
 <!-- README.md é gerado a partir deste README.Rmd. Por favor, edite  e renderize este arquivo -->
 
-# Controle de Versão de Projetos (Clonar e/ou Bifurcar (Fork))
+# Tutorial de Uso do Git/Github com R e Rstudio
 
 <!-- badges: start -->
 <!-- badges: end -->

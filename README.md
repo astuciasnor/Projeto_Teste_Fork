@@ -322,9 +322,9 @@ git branch nome-da-branch
 git checkout nome-da-branch
 ```
 
-Agora realiza as modificações no arquivo desejado (`login.txt`). Após
-realizar as modificações, adicione-as ao controle de versão e faça o
-commit:
+Agora realiza as modificações no arquivo desejado (`login.txt`). Inclua
+o campo: `digite nome pet.` Após realizar as modificações, adicione-as
+ao controle de versão e faça o commit:
 
 ``` bash
 git add .

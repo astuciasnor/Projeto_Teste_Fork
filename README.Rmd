@@ -214,7 +214,7 @@ Vamos agora fazer umas alterações pequenas no arquivo Readme.Rmd e salve-o (Re
 |  2  | Rayane Leticia Furtado Pinheio | rayanefurtado63\@gmail.com |
 |  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1\@gmail.com  |
 |  4  |          Elton Correa          |    eltonpesc\@gmail.com    |
-|  5  |                                |                            |
+|  5  |          Texto Rayane          |                            |
 |  6  |                                |                            |
 |  7  |                                |                            |
 

@@ -402,8 +402,8 @@ git branch nome-da-branch
 git checkout nome-da-branch
 ```
 
-Após realizar as modificações, adicione-as ao controle de versão e faça
-o commit:
+Agora realiza as modificações no arquivo desejada. Após realizar as
+modificações, adicione-as ao controle de versão e faça o commit:
 
 ``` bash
 git add .

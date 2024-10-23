@@ -74,6 +74,8 @@ usethis::edit_r_environ()
 
 # Como criar repositório
 
+,gjgkjf httdfdrsdsss
+
 ## Criando repositório primeiro no Github
 
 1.  A forma mais eficiente de criar repositório é fazer via o site do

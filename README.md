@@ -386,12 +386,6 @@ Certifique-se de que você está no diretório correto:
 getwd()
 ```
 
-Agora, visualize o histórico de commits:
-
-``` bash
-git reflog
-```
-
 ### **Criação de Branches e Commits**
 
 Para listar as branches locais e verificar em qual você está

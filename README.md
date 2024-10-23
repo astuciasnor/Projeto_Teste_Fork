@@ -373,273 +373,145 @@ git push origin --delete nome-da-branch
 
 # **Criando um Pull Request**
 
-Se você não for o mantenedor, deve fazer um Pull Request para solicitar
-a mesclagem de suas mudanças com a branch principal do projeto. Execute
-os seguintes passos:
+Se você não for o mantenedor do repositório, precisará criar um **Pull
+Request (PR)** para solicitar a mesclagem de suas modificações com a
+branch principal (geralmente `master` ou `main`). Siga os passos abaixo:
 
-1.  Entre na branch `master`, faça um `pull` e depois mude para a branch
-    que você deseja solicitar o Pull Request:
+## **Passo 1: Entrar na branch `master` e sincronizar o código local**
+
+Antes de iniciar o trabalho, você deve garantir que a branch `master` do
+seu repositório local esteja atualizada com a versão mais recente do
+repositório remoto.
 
 ``` bash
+
+# Troque para a branch master
 git checkout master
-git pull
+```
+
+``` bash
+
+# Faça pull para garantir que a branch master está atualizada
+git pull origin master
+```
+
+## **Passo 2: Mudar para a branch onde você fez as alterações**
+
+Agora, mude para a branch onde você fará as suas alterações.
+
+``` bash
+
+# Mudar para a branch onde as modificações foram realizadas
 git checkout nome-da-branch
 ```
 
-2.  Faça suas alterações, adicione e comite as modificações:
+## **Passo 3: Fazer alterações no projeto**
+
+Realize as alterações necessárias no projeto, como modificar arquivos,
+adicionar novos arquivos ou pastas. Neste ponto, crie uma linha de
+código no arquivo `request.R`. Pode ser um vetor, por exmplo.
+
+## **Passo 4: Adicionar e comitar as alterações**
+
+Depois de fazer as modificações, adicione os arquivos alterados ao
+controle de versão e crie um commit descrevendo o que foi alterado.
 
 ``` bash
+
+# Adicionar todas as alterações ao controle de versão
 git add .
-git commit -m "Descrição das alterações"
 ```
-
-3.  Envie suas alterações ao GitHub e crie um Pull Request:
 
 ``` bash
-git push
+
+# Criar um commit descrevendo as mudanças
+git commit -m "Descrição clara e objetiva das alterações"
 ```
 
-4.  No GitHub, clique em **Compare & Pull Request**, descreva suas
-    mudanças e clique em **Create Pull Request**.
-5.  Após a mesclagem, passe as seguinte etpas:
+## **Passo 5: Enviar as alterações ao GitHub**
 
-- Mude para a master
-- Faça pull
-- Delete a branch no computador
-- Delee a branch no Github
+Agora, envie suas alterações para o repositório remoto, especificamente
+para a branch em que você está trabalhando.
 
-## **Trabalhando com versionamento no Terminal**
+``` bash
 
-De agora em diante, vamos trabalhar via Terminal do RStudio a fim de
-trabalhar de forma mais profissional com o versionamento de códigos.
+# Enviar as alterações para o repositório remoto
+git push origin nome-da-branch
+```
 
-### **Verificando o histórico de atualizações**
+## **Passo 6: Criar um Pull Request no GitHub**
 
-Certifique-se de que você está no diretório do projeto, digitando
-`getwd()` no console. Agora vamos ver o histórico de comando. Digite no
-terminal:
+1.  Acesse o seu repositório no GitHub.
+2.  Clique no botão **Compare & Pull Request** que aparecerá assim que o
+    push for feito com sucesso.
+3.  Descreva as mudanças que você fez e por que elas são necessárias.
+4.  Clique em **Create Pull Request** para submeter a solicitação de
+    mesclagem ao mantenedor.
 
-`git reflog`
+**Após a Mesclagem**
 
-A aparecerá uma lista de todos os commits (versionamentos) que você já
-fez no projeto e de seus colaboradores. Vamos agora executar as etapas
-listadas acima
+Depois que o mantenedor aprovar e mesclar suas alterações na branch
+`master`, você deve seguir algumas etapas para limpar seu ambiente de
+desenvolvimento local.
 
-### **Criação de Branches e Commits**
+## **Passo 7: Mudar para a branch `master`**
 
-- Antes de criar a branch para começar as modificações, verifica as suas
-  branches locais como o comando
+Volte para a branch `master` para que você possa sincronizar as
+alterações feitas no repositório.
 
-`git branch`
+``` bash
 
-Aparecerão as branches e a branch atual, que será destacada em verde.
+# Trocar para a branch master
+git checkout master
+```
 
-- Vamos agora criar uma nova branch em que trabalharemos no arquivo
-  Readme.Rmd para aprendermos a usar essas funcionalidades do git.
-  Chamaremos essa branch de “leia-me”.
+## **Passo 8: Sincronizar as atualizações**
 
-`git branch leia-me`
+Agora, faça um pull para trazer as últimas alterações da branch
+`master`, incluindo as suas contribuições e qualquer outra alteração que
+tenha sido feita.
 
-Verifique se ela foi criado com o comando abaixo ou na aba Git do
-Rstudio
+``` bash
 
-`git branch`
+# Fazer pull para obter a versão mais atualizada da master
+git pull origin master
+```
 
-- É preciso mude agora para a branch em que deseja trabalhar. Digite os
-  seguintes comando:
+## **Passo 9: Deletar a branch local**
 
-`git checkout leia-me`
+Após a mesclagem, é uma boa prática deletar a branch que você usou para
+desenvolver as alterações, já que ela não será mais necessária.
 
-`git branch`
+``` bash
 
-### Realizando alterações
+# Deletar a branch local
+git branch -d nome-da-branch
+```
 
-Vamos agora fazer umas alterações pequenas no arquivo Readme.Rmd e
-salve-o (Renderize que você já vai salvar), e depois feche-o.
+## **Passo 10: Deletar a branch remota (opcional)**
 
-**Cadastre seu nome e endereço de e-mail abaixo:**
+Se a branch não será mais utilizada por ninguém, você pode também
+deletá-la no repositório remoto (GitHub).
 
-| \#  |              Nome              |          e-mail           |
-|:---:|:------------------------------:|:-------------------------:|
-|  1  |    Evaldo Martins da Silva     |   evaldomartins@ufpa.br   |
-|  2  | Rayane Leticia Furtado Pinheio | rayanefurtado63@gmail.com |
-|  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1@gmail.com  |
-|  4  |          Elton Correa          |    eltonpesc@gmail.com    |
-|  5  |          Texto Rayane          |                           |
-|  6  |          Teste thayan          |                           |
-|  7  |          Texto Evaldo          |                           |
+``` bash
 
-Lista de Colaboradores do Projeto (Repositório).
+# Deletar a branch no repositório remoto
+git push origin --delete nome-da-branch
+```
 
-- Digite o seguinte comando abaixo para identificar qualquer modificação
-  nos arquivos:
+## **Considerações Finais**
 
-`git status`
+1.  **Pull Request (PR)** é o processo mais comum para sugerir mudanças
+    em um projeto colaborativo no GitHub. Ao criar um PR, você solicita
+    que suas alterações sejam revisadas e integradas à branch principal.
 
-- Adicione a modificação. Mas lembre que a modificaçõa ainda não foi
-  para a branch master
+2.  **Comunicação**: Descreva claramente o que foi alterado no PR para
+    facilitar a revisão. Isso ajuda o mantenedor a entender o contexto
+    das mudanças.
 
-`git add .`
-
-`git status`
-
-### Fazendo o commit e push das modificações
-
-- Vamos fazer o commit dessa alteração (versionamento)
-
-`git commit -m "Adicionando nome e e-mail"`
-
-- Estando tudo certo até agora, faça o `git push` para enviar ao Github
-
-`git push`
-
-Ele dá uma mensagem de erro quando criamos uma branch nova. Copie a
-sugestão de comando e execute novamente.
-
-`git push --set-upstream origin leia-me`
-
-- Verifique agora no Github as duas versões do arquivo de texto em cada
-  uma das branches, ou seja, `leia-me` e `master`.
-
-### Realizando a mesclagem
-
-- É preciso, então, realizar a MESCLAGEM da `leia-me` para a `master`.
-  Se vc for o mantendedor do projeto, volte ao terminal do RStudio e
-  digite:
-
-`git branch`
-
-Agora vamos unir o código. Você vai entrar na branch que vai receber as
-atualizações, no caso a branch master com os seguintes comandos:
-
-`git checkout master`
-
-`git branch`
-
-Agora podemos mesclar da `leia-me` para a `master`.
-
-**Obs**: Antes de fazer a mesclagem, recomenda-se puxar (pull) as
-atualizaçãoes que estão no servidor para a sua máquina, pois pode ser
-que algum outro colega fez atualizações (é preciso não mexer na mesma
-parte de funcionalidade do código que você) e você pode correr o risco
-de estar fazendo mesclagem com uma versão antiga. Digite os comandos
-abaixo:
-
-`git pull`
-
-`git merge leia-me`
-
-- Faça agora o git push para enviar ao Github remoto
-
-`git push`
-
-Agora vá na branch master do Github remoto e verifique se o código foi
-atualizado na master. Só adicione os códigos que foram testados e estão
-funcionando corretamente.
-
-### Apague as branches locais e remota
-
-- Finalmente, `apague a branch local e remota.` Mude para outra branch,
-  como a master e apague a branch local
-
-  `git checkout master`
-
-  `git branch -d nome-da-branch`
-
-- Se quiser forçar a exclusão de uma branch se ela ainda não foi
-  mesclada, use:
-
-  - `git branch -D nome-da-branch`
-
-- Para apagar a branch no repositório remoto, você precisa usar o
-  seguinte comando
-
-  `git push origin --delete nome-da-branch`
-
-**Obs: Caso não seja o mantenedor do projeto,** veja como se faz o
-processo de alterar/comitar/empurrar/mesclar/apagar branch em *Criando
-uma Pull Request* usando o terminal.
-
-## **Mais um exercício de aplicação**
-
-Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade
-qualquer no projeto)
-
-1.  Faça a atualização: `git pull` na master
-
-2.  Crie a sua branch e mude para ela:
-    `git checkout -b sistema-de-login master`
-
-3.  Crie um novo arquivo txt chamado
-    `sistema de login.txt (ou login2.txt)` e salve-o.
-
-4.  Digite `git add . && git status` e o arquivo ficará pronto para ser
-    adicionado
-
-5.  Confirme essas alterações: `git commit -m "Criado sistema de Login"`
-
-6.  Digamos que tudo esteja funcionando e checado o código remotamente,
-    volte para a master:
-
-    `git checkout master && git branch`
-
-7.  Atualize o código da master: `git pull`
-
-8.  Agora sim, você pode mesclar: `git merge sistema-de-login master`
-
-9.  Mande essa alteração para o servidor: `git push`
-
-10. Observe no servidor do github as alterações
-
-11. Apague a branch:
-    `git checkout master && git branch -d nome-da-branch`
-
-12. Apague a branch remotamente:
-    `git push origin --delete nome-da-branch`
-
-# **Criando um Pull Request**
-
-Em alguns casos, só vamos conseguir unir códigos se fizermos uma
-requisição para uma pessoa responsável pelo repositório através do
-processo chamado Pull request. Vamos imaginar que você queira fazer
-alterações via a branch sistema-de-login.
-
-1.  Vamos entrar na nossa master `(git checkout master)`, fazer
-    `git pull` e depois mudar para a branch sistema-de-login:
-    `git checkout sistema-de-login`
-
-2.  Altere o arquivo `login.txt` acrescentando a linha: “Digite sua
-    idade**“** e salve o arquivo.
-
-3.  Adicione : `git add . && git status`
-
-4.  Agora faça commit:
-    `git commit -m "Adicionado idade ao sistema de login"`
-
-5.  Agora, seu código precisa ser mesclado por outra pessoa da equipe.
-    Você faz um push e não mescla nada como feito acima. Digite de
-    dentro da branch modificada: `git push`
-
-6.  O Sitema vai pedir que digite um novo comando:
-    `git push --set-upstream origin sistema-de-login`
-
-7.  Veja na página no Github e observará que aparece a branch
-    sistema-de-login atualizada recentemente e que pede para comparar e
-    fazer Pull Request. Clique em `Compare & Pull Request`
-
-8.  O sistema muda para a janela indicando que a solicitação de
-    mesclagem vai da branch sistema-de-login para a master
-
-9.  Você pode explicar mais em comentários ao mantenedor sobre sua
-    contribuição e clique em `Create Pull Request`
-
-10. A pessoa que tiver o poder para fazer a revisão e mesclar, pode
-    clicar em `Merge Pull Request`
-
-11. Vá para master e faça um git pull para obter as modificações
-    mescladas
-
-12. Apague a branch: veja acima como apagar um branch pelo terminal.
+3.  **Boa prática**: Sempre trabalhe em branches separadas para manter a
+    organização do repositório e garantir que a branch principal se
+    mantenha estável.
 
 # **Apagando a última modificação**
 

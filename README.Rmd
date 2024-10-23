@@ -144,8 +144,6 @@ Após ter criado uma cópia do repositório a partir do Github remoto usando a o
 
 1.  **Primeiro, sempre** crie um galho ou ramificação (**branch**) - A criação de branch é recomendada antes de alterar qualquer arquivo do projeto em que você pretende contribuir. É importante que você esteja na branch principal (master) e use o comando abaixo no console, dando nome apropriado à branch que reflita as modificações que deseja implementar.
 
-<!-- -->
-
 2.  Depois, comece a fazer as contribuições nos arquivos desejados ou mesmo criar novos arquivos e pastas. Você fará pequenas pequenas modificação no arquivo Readme.Rmd, mais especificamente na Tabela abaixo, incluindo seu nome e e-mail. Depois renderize (aperte no botão `Knit`) para concluir a produção, também, do arquivo `Readme.md`.
 
 3.  Após término das suas alterações, realize o `Commit` com os comando do git mais abaixo e o faça o `push` para as modificaçãoes irem para o repositório do Github. Siga procedimentos mais abaixo

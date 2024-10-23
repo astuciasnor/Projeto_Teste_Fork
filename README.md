@@ -183,8 +183,6 @@ outros não editáveis dentro das pasta do projeto.
     console, dando nome apropriado à branch que reflita as modificações
     que deseja implementar.
 
-<!-- -->
-
 2.  Depois, comece a fazer as contribuições nos arquivos desejados ou
     mesmo criar novos arquivos e pastas. Você fará pequenas pequenas
     modificação no arquivo Readme.Rmd, mais especificamente na Tabela

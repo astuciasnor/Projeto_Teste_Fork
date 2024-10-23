@@ -79,7 +79,7 @@ usethis::edit_r_environ()
 
 ## Clone o repositório em seu computador
 
-1.   Clone o repositório para que seja criado na sua máquina local. Clique no botão verde **Code**. Copie a url do projeto para poder clonar.
+1.  Clone o repositório para que seja criado na sua máquina local. Clique no botão verde **Code**. Copie a url do projeto para poder clonar.
 
 2.  Em seguida, no RStudio, você pode criar uma cópia desse repositório para trabalhar em **Projeto com Versionamento** indo em `File–> New projec`t e escolha a opção de `Version Control –> Git` e coloque a **url** do repositório e especifique a pasta onde este será salvo.
 

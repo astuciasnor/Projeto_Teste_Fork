@@ -247,6 +247,9 @@ Agora, crie uma nova branch de nome `login1` para realizar as alterações:
 
 ```{bash, echo = TRUE, eval = FALSE}
 git branch nome-da-branch
+```
+
+```{bash, echo = TRUE, eval = FALSE}
 git checkout nome-da-branch
 ```
 
@@ -254,9 +257,15 @@ Agora realiza as modificações no arquivo desejado (`login.txt`). Após realiza
 
 ```{bash, echo = TRUE, eval = FALSE}
 git add .
-git commit -m "Descrição das alterações"
-git push --set-upstream origin nome-da-branch
+```
 
+```{bash, echo = TRUE, eval = FALSE}
+git commit -m "Descrição das alterações"
+```
+
+```{bash, echo = TRUE, eval = FALSE}
+
+git push --set-upstream origin nome-da-branch
 ```
 
 Após executar o último comando acima, vá no repositório sua página do Github (lembre-se, aqui você é o mantenedor) e realize uma `Pull Request` . Você mesmo fará mesclagem (`Merge`).
@@ -294,7 +303,12 @@ git push
 Após a mesclagem, é possível apagar a branch local e a branch remota:
 
 ```{bash, echo = TRUE, eval = FALSE}
+
 git branch -d nome-da-branch
+```
+
+```{bash, echo = TRUE, eval = FALSE}
+
 git push origin --delete nome-da-branch
 ```
 
@@ -418,58 +432,169 @@ git push origin --delete nome-da-branch
 
 3.  **Boa prática**: Sempre trabalhe em branches separadas para manter a organização do repositório e garantir que a branch principal se mantenha estável.
 
-# **Apagando a última modificação**
+# **Apagando a Última Modificação**
 
-Caso aconteça algum erro, é possível voltar ao momento anterior às modificações (ou até ainda a um anterior a este se os conflitos forem grandes, mas **tenha muito cuidado em resetar commits mais antigos**). Observamos que esta parte de reverter mudanças pode não ser tão necessária, pois usamos poucos linhass de códigos. Mesmo assim, vamos ver algumas funções básicas , caso precise. Primeiro vemos o histórico de atualizações.
+Se ocorrer algum erro, é possível voltar ao estado anterior à modificação. Você pode até reverter para um estado anterior mais distante, mas é importante ter cuidado ao resetar commits mais antigos, pois isso pode impactar o histórico do projeto. Mesmo que isso não seja sempre necessário, é útil saber como proceder caso precise corrigir algo.
 
-1.  Digite `git reflog` no terminal e veja qual o identificador do commit (`hash do commit`, um número alfanumérico com 8 caracteres) anterior a essa modificação
+## **Passo 1: Visualizar** Histórico de Commits
 
-2.  Para resetar mudanças posteriores, digite o comando seguinte acompanhado do identificador anterior : `git reset --hard 7d0932f`
+Primeiro, você precisa verificar o histórico de commits e identificar o ponto para o qual deseja reverter o projeto. Para isso, use o comando:
 
-    **Obs:** Caso vc se arrependa dessa eliminação, você pode voltar atrás, fazendo um `git reflog` e digitar o numero de identificação da modificação que se arrependeu de apagar: `git reset --hard 5a6cc0a`
+```{bash, echo = TRUE, eval = FALSE}
 
-3.  Mas se vc quer continuar com a modificação, você precisará que o histórico local do seu repositório não fique atrás do histórico remoto. Você deve forçar que o histórico remoto seja igual ao local (o que pode sobrescrever alterações remotas, para isso tenha certeza da modificação). Você deve usar o comando\
-    \
-    **`git push --force`**
+git reflog
+```
 
-    Obs: veja a partir do minuto 23:00 do vídeo `Curso de Git e Github Completo 2023` para mais esclarecimentos.
+Esse comando exibirá uma lista com o histórico de commits e seus identificadores (hashes), que são códigos alfanuméricos de 8 caracteres. Identifique o commit anterior ao erro que você deseja corrigir.
 
-# **Considerações Finais**
+## **Passo 2: Resetar para um Commit Anterior**
 
--   **Reverter um commit:** Mantém o histórico do commit original e adiciona um novo commit que desfaz as mudanças.
+Para voltar a um commit anterior, execute o seguinte comando, substituindo o identificador do commit pelo hash correspondente:
 
--   **Resetar para um estado anterior:** Reescreve a história do repositório, removendo commits subsequentes.
+```{bash, echo = TRUE, eval = FALSE}
 
--   **Recomenda-se toda vez que fizer um commit, fazer `git push`**, antes de fazer novas alterações, para evitar a mensagem de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado em fazer pull entre seu commit e seu push, pois pode gerar conflito de versões. Tudo para evitar trabalhar em versões não atualizadas.
+git reset --hard 7d0932f
+```
 
--   O "Pull with rebase" na aba Git, e especificamente na interface do RStudio, é uma operação que combina o comando **`git pull`** com a opção **`--rebase`**. Isso significa que, ao buscar e integrar as mudanças do repositório remoto, suas mudanças locais não commitadas ou suas novas alterações serão reaplicadas no topo do histórico do repositório remoto. **Isso é particularmente útil quando fazemos reset para um commit no passado**. Outras situações em que **devemos usar o Pull with rebase:**
+Esse comando redefine o repositório local para o estado do commit especificado, desfazendo qualquer alteração feita após ele. **Cuidado:** isso removerá qualquer mudança não comitada.
 
-    -   **Manter um histórico de commit limpo e linear**: Ao usar rebase, o histórico do commit parece como se todas as mudanças fossem aplicadas uma após a outra, sem os commits de merge.
+#### **Passo 3: Revertendo o Reset (Opcional)**
 
-    -   **Colaborar em um projeto com muitos colaboradores**: Um histórico linear facilita a compreensão do que foi alterado e por quem.
+Se você mudar de ideia e quiser restaurar o commit que acabou de resetar, pode voltar atrás executando novamente o comando `git reflog` e usando o identificador do commit que deseja recuperar:
 
-        ## Descartando alterações
+```{bash, echo = TRUE, eval = FALSE}
 
-**Como descartar alterações não commitadas em um arquivo e retornar ao estado do último commit**? Siga os seguintes comandos no Terminal do Git:
+git reset --hard 5a6cc0a
+```
 
-`git status`
+#### **Passo 4: Sincronizar com o Repositório Remoto**
 
-`git checkout -- nome-do-arquivo`
+Após fazer um reset local, é importante garantir que o repositório remoto também esteja atualizado. Se o repositório remoto tiver commits que você reverteu no local, será necessário forçar a atualização para alinhar ambos os históricos. Isso pode sobrescrever as alterações no servidor remoto, então tenha certeza das suas mudanças.
 
-`git reset HEAD nome-do-arquivo (Para remover alterações no stage)`
+Para forçar o push das alterações locais para o repositório remoto, utilize:
 
-## Alterações não comitadas e sem ter feito uma branch
+```{bash, echo = TRUE, eval = FALSE}
 
-É possível **mover modificações não commitadas para uma nova branch?**
+git push --force
+```
 
-Sim. Vamos ver os passos necessários para criar uma nova branch, mover suas alterações para essa nova branch e depois commitá-las.
+Esse comando força a sobrescrição do histórico remoto com o histórico local.
 
--   `git status`
--   `git checkout -b nova-branch`
--   `git status`
--   `git add .`
--   `git commit -m "Descrição das alterações"`
--   `git push origin nova-branch`
+## **Considerações Importantes:**
+
+1.  **Usar `git reset --hard` com cautela**: Esse comando remove permanentemente as alterações que não foram comitadas e pode alterar o histórico de commits.
+
+2.  **Reverta apenas se necessário**: Antes de usar o `--force` para sobrescrever o repositório remoto, certifique-se de que isso não afetará o trabalho de outros colaboradores.
+
+3.  **Alternativa com `git revert`**: Em vez de usar `reset --hard`, você pode usar `git revert` para desfazer alterações sem alterar o histórico. Isso cria um novo commit que desfaz as mudanças, mantendo a integridade do histórico de commits.
+
+Obs: veja a partir do minuto 23:00 do vídeo `Curso de Git e Github Completo 2023` para mais esclarecimentos.
+
+# Descartando Alterações Não Commitadas em um Arquivo
+
+Se você fez alterações em um arquivo, mas ainda não fez o commit e deseja descartar essas modificações, retornando o arquivo ao estado do último commit, siga os passos abaixo usando o Terminal do Git:
+
+## Passo 1: Verificar o Status do Repositório
+
+Antes de qualquer ação, é importante verificar o estado atual do repositório e ver quais arquivos foram modificados ou estão prontos para commit.
+
+```{bash, echo = TRUE, eval = FALSE}
+git status
+```
+
+Esse comando listará os arquivos que foram modificados e se estão ou não no *staging area* (prontos para serem commitados).
+
+## **Passo 2: Descartar as Alterações em um Arquivo Específico**
+
+Se você deseja descartar todas as modificações feitas em um arquivo específico e restaurá-lo ao estado do último commit, use o seguinte comando:
+
+```{bash, echo = TRUE, eval = FALSE}
+git checkout -- nome-do-arquivo
+```
+
+Esse comando descarta as alterações locais não commitadas no arquivo especificado, retornando-o ao estado do último commit.
+
+## **Passo 3: Remover Arquivos do Stage (Caso Estejam Preparados para Commit)**
+
+Se o arquivo já foi adicionado ao *staging area* (ou seja, preparado para commit com `git add`), mas você quer removê-lo dessa área sem descartar suas alterações, use o comando abaixo:
+
+```{bash, echo = TRUE, eval = FALSE}
+git reset HEAD nome-do-arquivo
+```
+
+Esse comando remove o arquivo do *staging area* e desfaz o `git add`, mas mantém as alterações feitas no arquivo. Isso é útil quando você quer revisar ou modificar mais antes de commitá-lo.
+
+# Movendo Alterações Não Commitadas para uma Nova Branch
+
+Se você fez alterações em arquivos, mas ainda não as comitou, e percebeu que deveria estar trabalhando em uma nova branch, não se preocupe. É possível criar uma nova branch e mover suas alterações para ela, sem perder nada. Veja como proceder:
+
+#### **Passo 1: Verificar o Status do Repositório**
+
+Antes de qualquer ação, verifique o status do repositório para confirmar as modificações não commitadas e garantir que você está na branch correta:
+
+```{bash, echo = TRUE, eval = FALSE}
+git status
+```
+
+Isso exibirá os arquivos modificados e não commitados no seu repositório.
+
+#### **Passo 2: Criar uma Nova Branch e Mudar para Ela**
+
+Agora, crie uma nova branch e mude para ela, preservando suas alterações:
+
+```{bash, echo = TRUE, eval = FALSE}
+git checkout -b nova-branch
+```
+
+Esse comando cria a nova branch chamada `nova-branch` e automaticamente muda para ela, carregando consigo todas as suas alterações não commitadas da branch anterior.
+
+#### **Passo 3: Verificar o Status da Nova Branch**
+
+Após criar e mudar para a nova branch, verifique novamente o status para confirmar que as alterações ainda estão no estado de não commitadas:
+
+```{bash, echo = TRUE, eval = FALSE}
+git status
+```
+
+#### **Passo 4: Adicionar as Alterações ao Staging Area**
+
+Agora que você está na nova branch, adicione as alterações ao *staging area* para prepará-las para commit:
+
+```{bash, echo = TRUE, eval = FALSE}
+git add .
+```
+
+O ponto final (`.`) indica que todas as modificações devem ser adicionadas ao *staging*.
+
+#### **Passo 5: Realizar o Commit das Alterações**
+
+Em seguida, faça o commit das suas alterações com uma mensagem descritiva:
+
+```{bash, echo = TRUE, eval = FALSE}
+git commit -m "Descrição das alterações"
+```
+
+#### **Passo 6: Enviar as Alterações para o Repositório Remoto**
+
+Por fim, envie suas alterações para o repositório remoto no GitHub:
+
+```{bash, echo = TRUE, eval = FALSE}
+# Caso esteja atuando como colaborador:
+git push origin nova-branch
+
+```
+
+Isso enviará as alterações da nova branch para o repositório remoto, criando a branch `nova-branch` também no GitHub.
+
+# **Boas Práticas Gerais**
+
+1.  **Commits Pequenos e Frequentes**: Realize commits de maneira frequente e com descrições claras. Isso facilita a revisão do código e ajuda a identificar pontos de erro rapidamente.
+
+2.  **Sincronize Regularmente**: Faça `git pull` regularmente antes de começar a trabalhar para garantir que você está com a versão mais recente do projeto. Isso evita conflitos e confusões.
+
+3.  **Use Branches**: Sempre crie uma nova branch para implementar mudanças específicas, mantendo a branch `master` ou `main` estável.
+
+4.  **Revisão de Código (Pull Requests)**: Utilize Pull Requests para revisar as alterações de forma colaborativa antes de mesclá-las à branch principal. Isso melhora a qualidade do código e reduz o risco de bugs.
 
 # Mais informações
 

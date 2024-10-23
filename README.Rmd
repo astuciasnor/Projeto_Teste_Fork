@@ -215,7 +215,7 @@ Vamos agora fazer umas alterações pequenas no arquivo Readme.Rmd e salve-o (Re
 |  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1\@gmail.com  |
 |  4  |          Elton Correa          |    eltonpesc\@gmail.com    |
 |  5  |                                |                            |
-|  6  |                                |                            |
+|  6  |          Teste thayan          |                            |
 |  7  |                                |                            |
 
 : Lista de Colaboradores do Projeto (Repositório).

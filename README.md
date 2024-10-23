@@ -1,13 +1,13 @@
 
 <!-- README.md é gerado a partir deste README.Rmd. Por favor, edite  e renderize este arquivo -->
 
-# Modelo Para Controle de Version de Projetos (Clonar e/ou Bifurcar (Fork))
+# Controle de Versão de Projetos (Clonar e/ou Bifurcar (Fork))
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-O Objetivo deste projeto chamdo **Projeto_Teste_Fork** é fornecer
-informações necessários para usuários inciais e intermediários
+O Objetivo deste projeto chamado **Projeto Teste Fork** é fornecer
+informações necessários para usuários iniciais e intermediários
 aprenderem a usar o Git/Github na interface RStudio para Controle de
 Versão de Projetos. A primeira parte usa as funções do pacote `usethis,`
 e a partir da seção *Trabalhando com Versionamento*, usamos os comandos
@@ -22,17 +22,16 @@ do Git.
 
 3.  Instale o Git e depois abra e feche o Git Bash ao fim da instalação.
     Feche e reinicie o Rstudio para reconhecer o local de instalação do
-    Git (NOrmalmente, *C:/Program Files/Git/bin/git.exe*).
+    Git (Normalmente, fica em *C:/Program Files/Git/bin/git.exe*).
 
-4.  Instale o pacote `usethis` e carregue-o para configurar o Git para
-    uso no Rstudio
+4.  Carregue o pacote `usethis` para configurar o Git para uso no
+    Rstudio
 
 ``` r
 library(usethis)
-#> Warning: package 'usethis' was built under R version 4.3.3
 ```
 
-# Configure o Git/Github no RStudio
+# Configurando o Git/Github no RStudio
 
 5.  Vamos usar o pacote `usethis` e os comando abaixo para parear com a
     sua conta remota no Github. Acesse o nome da sua conta e e-mail em
@@ -51,12 +50,12 @@ usethis::create_github_token() # Muda para o site do Github para fazer login
 ```
 
 Depois de fazer login, gere o token na própria página do Github e o
-copie. Após copiar, Você deverá colocar esse número no arquivo
-`.Renviron`. O `.Renviron` é um arquivo de configuração do R que permite
-que você especifique variáveis de ambiente para que fiquem disponíveis
-para o R. Ele é muito usado para disponibilizar senhas, chaves de API,
-etc. - coisas que são secretas - e por isso não é boa prática colocá-las
-no código. Então execute o seguinte comando:
+copie o número. Você deverá colocar esse número no arquivo `.Renviron`.
+O `.Renviron` é um arquivo de configuração do R que permite que você
+especifique variáveis de ambiente para que fiquem disponíveis para o R.
+Ele é muito usado para disponibilizar senhas, chaves de API, etc. -
+coisas que são secretas - e por isso não é boa prática colocá-las no
+código. Então execute o seguinte comando:
 
 7.  **Abra o arquivo .Renviron**
 
@@ -86,33 +85,32 @@ usethis::edit_r_environ()
 
 <img src="images/clipboard-142360520.png" width="637" />
 
-4.  Clone o repositório para que seja criado na sua máquina local
+## Clone o repositório em seu computador
 
+1.  Clone o repositório para que seja criado na sua máquina local.
     Clique no botão verde **Code**. Copie a url do projeto para poder
     clonar.
 
-<img src="images/clipboard-3984491672.png" width="376" />
-
-**Baixe o repositório(Projeto) a partir do Github remoto:**
-
-5.  Em seguida, no RStudio, você pode criar uma cópia desse repositório
+2.  Em seguida, no RStudio, você pode criar uma cópia desse repositório
     para trabalhar em **Projeto com Versionamento** indo em
     `File–> New projec`t e escolha a opção de `Version Control –> Git` e
     coloque a **url** do repositório e especifique a pasta onde este
     será salvo.
 
-6.  Ao fazer desta maneira, seu respositório já fica vinculado ao git do
+3.  Ao fazer desta maneira, seu respositório já fica vinculado ao git do
     seu computador e, obviamente, está pareado com o Github na internet.
 
-    **Implemente pequenas mudanças no seu projeto para testes:**
+<img src="images/clipboard-3984491672.png" width="376" />
 
-7.  Faça pequenos testes de alteração no seu repositório testes, como:
+## **Implemente pequenas mudanças no seu projeto de teste**
+
+1.  Faça pequenos testes de alteração no seu repositório teste, como:
     *criar pasta e arquivo nesta pasta, comitar (versionar) por meio da
-    aba git botão `Commit`, realizar `Push`*`.`
+    aba `git` botão `Commit`, realizar `Push`*`.`
 
-8.  Verifique no servidor do Github as suas alterações.
+2.  Verifique no servidor do Github as suas alterações.
 
-9.  Agora, faça alteração no arquivo Readme no Github web, commit e
+3.  Agora, faça alteração no arquivo `Readme.md` no Github web, commit e
     depois faça Pull no RStudio. Observe no arquivo se houve a mudança.
 
 ## Inclua pastas e arquivos no arquivo .gitignore
@@ -122,7 +120,7 @@ compartilhados/divulgados. Para isso, insira as pastas e arquivos no
 arquivo .`gitignore`. Verifique neste Projeto_Teste_Fork quais pastas e
 arquivos não são compartilhados.
 
-## Criando o Repositório no Computador Primeiro
+## Criando o Repositório no Computador
 
 Não é a forma mais recomendada, mas é possível criar um repositório
 pareado com o Github, no computador primeiro, da sequinte maneira:
@@ -140,7 +138,9 @@ Você também pode criar a partir de um
 depois use as duas útlimas linhas de comando acima para ligá-lo ao Git e
 carregá-lo ao Github.
 
-## Clonando e bifurcando um respositório (fork)
+# Clonando e bifurcando um respositório (fork)
+
+## Fazendo um fork com o usethis
 
 Quando queremos trabalhar em colaboração com mais pessoas, podemos não
 só clonar um respositório, mas também bifurcá-lo ao mesmo tempo. Para
@@ -153,14 +153,26 @@ usethis::create_from_github(
   fork = TRUE)
 ```
 
+## **Fazendo um Fork do Repositório no GitHub**
+
+1.  Acesse o repositório original no GitHub.
+
+2.  Clique no botão **Fork** no canto superior direito para criar uma
+    cópia do repositório em sua conta.
+
+3.  Siga os passos acima para clonar o repositório forkado em seu
+    computador
+
 # Contribuindo com um Projeto de Análise
 
+## Passo a passo de como fazer modificações
+
 Após ter criado uma cópia do repositório a partir do Github remoto
-usando a opção de fork (Bifurcamento), você pode querer melhorar ainda
-mais o código desse projeto de análise. Siga os passo abaixo para
-inserir as suas linhas de código, seja em arquivos `*.R`, `*.Rmd`,
-`*.qmd`, `*.csv`, `*xlsx`, ou quaisquer outros arquivos editáveis, ou
-inserir outros não editáveis dentro das pasta do projeto.
+usando a opção de fork (Bifurcamento), você pode querer melhorar o
+código desse projeto de análise. Siga os passo abaixo para inserir as
+suas linhas de código, seja em arquivos `*.R`, `*.Rmd`, `*.qmd`,
+`*.csv`, `*xlsx`, ou quaisquer outros arquivos editáveis, ou inserir
+outros não editáveis dentro das pasta do projeto.
 
 1.  **Primeiro, sempre** crie um galho ou ramificação (**branch**) - A
     criação de branch é recomendada antes de alterar qualquer arquivo do
@@ -169,35 +181,26 @@ inserir outros não editáveis dentro das pasta do projeto.
     console, dando nome apropriado à branch que reflita as modificações
     que deseja implementar.
 
-``` r
-usethis::pr_init(branch = "ajuda_grafico1")
-```
+<!-- -->
 
-2.  Agora, você pode começar a fazer as contribuições nos arquivos
-    desejados ou mesmo criar novos arquivos e pastas. Faça uma pequena
-    modificação no arquivo Readme.Rmd (Tabela abaixo, incluindo seu nome
-    e e-mail). Depois renderize (aperte no botão `Knit`).
+2.  Depois, comece a fazer as contribuições nos arquivos desejados ou
+    mesmo criar novos arquivos e pastas. Você fará pequenas pequenas
+    modificação no arquivo Readme.Rmd, mais especificamente na Tabela
+    abaixo, incluindo seu nome e e-mail. Depois renderize (aperte no
+    botão `Knit`) para concluir a produção, também, do arquivo
+    `Readme.md`.
 
-3.  Após término das suas alterações, realize o `Commit` (Botão na aba
-    git)
+3.  Após término das suas alterações, realize o `Commit` com os comando
+    do git mais abaixo e o faça o `push` para as modificaçãoes irem para
+    o repositório do Github. Siga procedimentos mais abaixo
 
-4.  NÃO pressione o botão
-    <span style="color: lightgreen;">**Push**</span> agora. A operação
-    de “empurrar” deve feita via digitação da função
-    **`usethis::pr_push()`** no console, seguida de `Enter`, a fim de
-    criar uma Pull Request (PR).
-
-    ``` r
-    usethis::pr_push()
-    ```
-
-5.  A página do Github se abrirá para que você possa completae o
+4.  A página do Github se abrirá para que você possa completae o
     `Pull Request (PR)`
 
-6.  Então comente as mudanças que fez e clique em
+5.  Então comente as mudanças que fez e clique em
     `Criar Requerimento Pull` (ou `Create Pull Request`)
 
-7.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a
+6.  Aguarde o mantenedor do projeto fazer a mesclagem (Merge). Após a
     mesclagem, aparecerá o botão Merged (Ou Mesclado). Só então você
     finaliza sua contribuição, fechando a brunch no Rstudio
 
@@ -207,25 +210,72 @@ usethis::pr_init(branch = "ajuda_grafico1")
     inclusive fazer pequenas alterações nas linhas de código recém
     mescladas e incluir um novo `Commit` e `Push`.
 
-8.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita
-    a sua contribuição, o (a) colaborador (a) deve voltar para a branch
-    `master` no RStudio, e então **clique primeiro** no botão
-    <span style="color: lightblue;">**Pull**</span> da aba git para
-    atualizar as contribuições suas mescladas e outras que eventualmente
-    o mantenedor do repositório acrescentou.
+7.  Por sua vez, quando receber um aviso do mantenedor de que foi aceita
+    a sua contribuição, o (a) colaborador(a) deve voltar para a branch
+    `master` no RStudio, e então realizar o
+    <span style="color: lightblue;">**Pull**</span> para atualizar as
+    contribuições suas mescladas e outras que eventualmente o mantenedor
+    do repositório acrescentou.
 
-9.  Volte à branch que você criou e delete-a usando a aba `Git` e
-    digitando no console **usethis::pr_finish().**
+8.  Volte à branch que você criou e delete-a usando os comando abaixo no
+    terminal
 
-    ``` r
-    usethis::pr_finish()
-    ```
+9.  Apague a branch no seu computador e no Github
 
 10. Pronto, você está com a versão mais atualizada na sua brach
     principal (master)
 
     **Obs2**: Como boa prática, sempre comunique o mantenedor de suas
     modificaçãoes.
+
+## **Trabalhando com versionamento no Terminal**
+
+De agora em diante, vamos trabalhar via Terminal do RStudio a fim de
+trabalhar de forma mais profissional com o versionamento de códigos.
+
+### **Verificando o histórico de atualizações**
+
+Certifique-se de que você está no diretório do projeto, digitando
+`getwd()` no console. Agora vamos ver o histórico de comando. Digite no
+terminal:
+
+`git reflog`
+
+A aparecerá uma lista de todos os commits (versionamentos) que você já
+fez no projeto e de seus colaboradores. Vamos agora executar as etapas
+listadas acima
+
+### **Criação de Branches e Commits**
+
+- Antes de criar a branch para começar as modificações, verifica as suas
+  branches locais como o comando
+
+`git branch`
+
+Aparecerão as branches e a branch atual, que será destacada em verde.
+
+- Vamos agora criar uma nova branch em que trabalharemos no arquivo
+  Readme.Rmd para aprendermos a usar essas funcionalidades do git.
+  Chamaremos essa branch de “leia-me”.
+
+`git branch leia-me`
+
+Verifique se ela foi criado com o comando abaixo ou na aba Git do
+Rstudio
+
+`git branch`
+
+- É preciso mude agora para a branch em que deseja trabalhar. Digite os
+  seguintes comando:
+
+`git checkout leia-me`
+
+`git branch`
+
+### Realizando alterações
+
+Vamos agora fazer umas alterações pequenas no arquivo Readme.Rmd e
+salve-o (Renderize que você já vai salvar), e depois feche-o.
 
 **Cadastre seu nome e endereço de e-mail abaixo:**
 
@@ -241,52 +291,8 @@ usethis::pr_init(branch = "ajuda_grafico1")
 
 Lista de Colaboradores do Projeto (Repositório).
 
-# **Trabalhando com versionamento no Terminal**
-
-De agora em diante, vamos trabalhar via Terminal do RStudio a fim de
-trabalhar de forma mais profissional com versionamento.
-
-## **Verificando o histórico de atualizações**
-
-Certifique-se de que você está no diretório do projeto, digitando
-`getwd()` no console. Agora vamos ver o histórico de comando. Digite no
-terminal:
-
-`git reflog`
-
-A aparecerá uma lista de todos os commits (versionamentos) que você já
-fez no projeto e de seus colaboradores. Vamos agora exercitar o que já
-fizemos com as funções do pacote usethis, desta feita com os comandos do
-Git.
-
-## **Criação de Branches e Commits**
-
-- Verifica as suas branches locais como o comando
-
-`git branch`
-
-Aparecerão as branches e a branch atual, que será destacada em verde.
-
-- Vamos agora criar uma nova branch em que trabalharemos num arquivo de
-  texto mais simples para aprendermos a usar essas funcionalidades do
-  git. Chamaremos essa branch de `textos`.
-
-`git branch textos`
-
-Verifique se ela foi criado com o comando ou na aba Git d Rstudio
-
-`git branch`
-
-- Mude agora para a branch em que deseja trabalhar. Digite os seguintes
-  comando:
-
-`git checkout textos`
-
-`git branch`
-
-- Vamos agora fazer umas alterações pequenas no arquivo de texto, salvar
-  e fechar o arquivo. Digite o seguinte comando abaixo para identificar
-  qualquer modificação nos arquivos:
+- Digite o seguinte comando abaixo para identificar qualquer modificação
+  nos arquivos:
 
 `git status`
 
@@ -297,9 +303,11 @@ Verifique se ela foi criado com o comando ou na aba Git d Rstudio
 
 `git status`
 
+### Fazendo o commit e push das modificações
+
 - Vamos fazer o commit dessa alteração (versionamento)
 
-`git commit -m "Adicionando o sobrenome"`
+`git commit -m "Adicionando nome e e-mail"`
 
 - Estando tudo certo até agora, faça o `git push` para enviar ao Github
 
@@ -308,13 +316,15 @@ Verifique se ela foi criado com o comando ou na aba Git d Rstudio
 Ele dá uma mensagem de erro quando criamos uma branch nova. Copie a
 sugestão de comando e execute novamente.
 
-`git push --set-upstream origin textos`
+`git push --set-upstream origin leia-me`
 
 - Verifique agora no Github as duas versões do arquivo de texto em cada
-  uma das branches, ou seja, `textos` e `master`.
+  uma das branches, ou seja, `leia-me` e `master`.
 
-- É preciso, então, realizar a MESCLAGEM da `textos` para a `master`. Se
-  vc for o mantendedor do projeto, volte ao terminal do Rstudio e
+### Realizando a mesclagem
+
+- É preciso, então, realizar a MESCLAGEM da `leia-me` para a `master`.
+  Se vc for o mantendedor do projeto, volte ao terminal do RStudio e
   digite:
 
 `git branch`
@@ -326,16 +336,18 @@ atualizações, no caso a branch master com os seguintes comandos:
 
 `git branch`
 
-Agora podemos mesclar da `textos` para a `master`.
+Agora podemos mesclar da `leia-me` para a `master`.
 
-**Obs**: Recomenda-se antes de fazer a mesclagem, puxar as atualizaçãoes
-que estão no servidor para a sua máquina, pois pode ser que algum outro
-colega fez atualizações e você pode correr o risco de estar fazendo
-mesclagem com uma versão antiga. Digite os comandos abaixo:
+**Obs**: Antes de fazer a mesclagem, recomenda-se puxar (pull) as
+atualizaçãoes que estão no servidor para a sua máquina, pois pode ser
+que algum outro colega fez atualizações (é preciso não mexer na mesma
+parte de funcionalidade do código que você) e você pode correr o risco
+de estar fazendo mesclagem com uma versão antiga. Digite os comandos
+abaixo:
 
 `git pull`
 
-`git merge textos`
+`git merge leia-me`
 
 - Faça agora o git push para enviar ao Github remoto
 
@@ -345,8 +357,10 @@ Agora vá na branch master do Github remoto e verifique se o código foi
 atualizado na master. Só adicione os códigos que foram testados e estão
 funcionando corretamente.
 
-- Finalmente, `apague a branch localmente.` Mude para outra branch, como
-  a master e apague a branch local
+### Apague as branches locais e remota
+
+- Finalmente, `apague a branch local e remota.` Mude para outra branch,
+  como a master e apague a branch local
 
   `git checkout master`
 
@@ -366,7 +380,7 @@ funcionando corretamente.
 processo de alterar/comitar/empurrar/mesclar/apagar branch em *Criando
 uma Pull Request* usando o terminal.
 
-## **Mais um exercício**
+## **Mais um exercício de aplicação**
 
 Vamos criar mais uma linha no arquivo de texto (ou outra funcionalidade
 qualquer no projeto)
@@ -376,7 +390,8 @@ qualquer no projeto)
 2.  Crie a sua branch e mude para ela:
     `git checkout -b sistema-de-login master`
 
-3.  Crie um novo arquivo txt chamado `sistema de login.txt` e salve-o.
+3.  Crie um novo arquivo txt chamado
+    `sistema de login.txt (ou login2.txt)` e salve-o.
 
 4.  Digite `git add . && git status` e o arquivo ficará pronto para ser
     adicionado
@@ -399,6 +414,9 @@ qualquer no projeto)
 11. Apague a branch:
     `git checkout master && git branch -d nome-da-branch`
 
+12. Apague a branch remotamente:
+    `git push origin --delete nome-da-branch`
+
 # **Criando um Pull Request**
 
 Em alguns casos, só vamos conseguir unir códigos se fizermos uma
@@ -410,8 +428,8 @@ alterações via a branch sistema-de-login.
     `git pull` e depois mudar para a branch sistema-de-login:
     `git checkout sistema-de-login`
 
-2.  Altere o arquivo `sistema de login.txt` acrescentando a linha:
-    “Digite sua idade**“** e salve o arquivo.
+2.  Altere o arquivo `login.txt` acrescentando a linha: “Digite sua
+    idade**“** e salve o arquivo.
 
 3.  Adicione : `git add . && git status`
 
@@ -425,20 +443,23 @@ alterações via a branch sistema-de-login.
 6.  O Sitema vai pedir que digite um novo comando:
     `git push --set-upstream origin sistema-de-login`
 
-7.  Veja página no Github e observará que aparece a branch
+7.  Veja na página no Github e observará que aparece a branch
     sistema-de-login atualizada recentemente e que pede para comparar e
     fazer Pull Request. Clique em `Compare & Pull Request`
 
 8.  O sistema muda para a janela indicando que a solicitação de
     mesclagem vai da branch sistema-de-login para a master
 
-9.  Você pode explicar mais em comentários ao mantenedor sibre sua
+9.  Você pode explicar mais em comentários ao mantenedor sobre sua
     contribuição e clique em `Create Pull Request`
 
 10. A pessoa que tiver o poder para fazer a revisão e mesclar, pode
     clicar em `Merge Pull Request`
 
-11. Veja acima como apagar um branch pelo terminal.
+11. Vá para master e faça um git pull para obter as modificações
+    mescladas
+
+12. Apague a branch: veja acima como apagar um branch pelo terminal.
 
 # **Apagando a última modificação**
 
@@ -481,13 +502,13 @@ de atualizações.
 - **Resetar para um estado anterior:** Reescreve a história do
   repositório, removendo commits subsequentes.
 
-- **Recomenda-se toda vez que fizer um commit, fazer `git push` ou
-  `pr_push()`** antes de fazer novas alterações, para evitar a mensagem
-  de 1 ou 2 commit a frente das modificações. Dá pra fazer, mas cuidado
-  em fazer pull entre seu commit e seu push, pois pode gerar conflito de
-  versões. Tudo para evitar trabalhar em versões não atualizadas.
+- **Recomenda-se toda vez que fizer um commit, fazer `git push`**, antes
+  de fazer novas alterações, para evitar a mensagem de 1 ou 2 commit a
+  frente das modificações. Dá pra fazer, mas cuidado em fazer pull entre
+  seu commit e seu push, pois pode gerar conflito de versões. Tudo para
+  evitar trabalhar em versões não atualizadas.
 
-- O “Pull with rebase” no Git, e especificamente na interface do
+- O “Pull with rebase” na aba Git, e especificamente na interface do
   RStudio, é uma operação que combina o comando **`git pull`** com a
   opção **`--rebase`**. Isso significa que, ao buscar e integrar as
   mudanças do repositório remoto, suas mudanças locais não commitadas ou
@@ -503,21 +524,31 @@ de atualizações.
   - **Colaborar em um projeto com muitos colaboradores**: Um histórico
     linear facilita a compreensão do que foi alterado e por quem.
 
-- **Como descartar alterações não commitadas em um arquivo e retornar ao
-  estado do último commit**? Siga os seguintes comandos no Terminal do
-  Git:
+    ## Descartando alterações
 
-  `git status`
+**Como descartar alterações não commitadas em um arquivo e retornar ao
+estado do último commit**? Siga os seguintes comandos no Terminal do
+Git:
 
-  `git checkout -- nome-do-arquivo`
+`git status`
 
-  `git reset HEAD nome-do-arquivo (Para remover alterações no stage)`
+`git checkout -- nome-do-arquivo`
 
-- É possível **mover modificações não commitadas para uma nova branch?**
-  Vamos ver os passos necessários para criar uma nova branch, mover suas
-  alterações para essa nova branch e depois commitá-las.
+`git reset HEAD nome-do-arquivo (Para remover alterações no stage)`
 
-  `git status git checkout -b nova-branch git status git add . git commit -m "Descrição das alterações" git push origin nova-branch`
+## Alterações não comitadas e sem ter feito uma branch
+
+É possível **mover modificações não commitadas para uma nova branch?**
+
+Sim. Vamos ver os passos necessários para criar uma nova branch, mover
+suas alterações para essa nova branch e depois commitá-las.
+
+- `git status`
+- `git checkout -b nova-branch`
+- `git status`
+- `git add .`
+- `git commit -m "Descrição das alterações"`
+- `git push origin nova-branch`
 
 # Mais informações
 
@@ -543,7 +574,8 @@ with git and GitHub](https://www.youtube.com/watch?v=DnwEaa5QtpI)
 # Anexo de criação do arquivo Readme.rmd
 
 Para criar o Readme.rmd usei a função `usethis::use_readme_rmd()` . O
-que é especial sobre usar o `README.Rmd` em vez de apenas o `README.md`?
+que há de tão especial sobre usar o `README.Rmd` em vez de apenas o
+`README.md`?
 
 Res.: Você pode incluir chunks como este:
 
@@ -567,5 +599,3 @@ Você também pode incorporar gráficos, por exemplo:
 
 Nesse caso, não se esqueça de fazer o commit e enviar (push) os arquivos
 de figura resultantes para que eles sejam exibidos no GitHub.
-
-Só adiconando um texto em 04/10/2024

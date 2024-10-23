@@ -1,6 +1,8 @@
-Nome       e-mail
+########################      Sistema de Login    ##############################
 
-Digite sua idade: 
-Digite o nome de sua mãe:
-Alteração não comitada
-Digite nome do pai:
+Este é um Sistema de Login bem Básico para você acessar uma página na internet.
+
+Digite seu e-mail:
+Digite sua senha:
+Digite sua idade:
+

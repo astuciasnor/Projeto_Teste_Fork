@@ -65,7 +65,7 @@ código. Então execute o seguinte comando:
 usethis::edit_r_environ()
 ```
 
-8.  Crie uma nova linha nesse arquivo digitando primeiramente :
+8.  Crie uma nova linha nesse arquivo, digitando primeiramente :
     GITHUB_PAT=SEU_TOKEN. Exemplo:
 
 `GITHUB_PAT=ghp_Ko3mdlNJpBzQ7lvzKTvGFg91f6HpBQlablalba`

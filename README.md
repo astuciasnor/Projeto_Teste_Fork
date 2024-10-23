@@ -288,7 +288,7 @@ salve-o (Renderize que você já vai salvar), e depois feche-o.
 |  3  | Carlos Thayan Moreira Ferreira | thayanmoreira1@gmail.com  |
 |  4  |          Elton Correa          |    eltonpesc@gmail.com    |
 |  5  |          Texto Rayane          |                           |
-|  6  |                                |                           |
+|  6  |          Teste thayan          |                           |
 |  7  |          Texto Evaldo          |                           |
 
 Lista de Colaboradores do Projeto (Repositório).

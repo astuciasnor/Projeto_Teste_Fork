@@ -74,7 +74,7 @@ usethis::edit_r_environ()
 
 # Como criar repositório
 
-,gjgkjf httdfdrsdsss
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
 ## Criando repositório primeiro no Github
 

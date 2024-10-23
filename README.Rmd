@@ -13,13 +13,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Controle de Versão de Projetos (Clonar e/ou Bifurcar (Fork))
+# Tutorial de Uso do Git/Github com R e Rstudio
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-O Objetivo deste projeto chamado **Projeto Teste Fork** é fornecer informações necessários para usuários iniciais e intermediários aprenderem a usar o Git/Github na interface RStudio para Controle de Versão de Projetos. A primeira parte usa as funções do pacote `usethis,` e a partir da seção *Trabalhando com Versionamento*, usamos os comandos do Git.
+## Objetivo
+
+O **Projeto Teste Fork** tem como objetivo fornecer orientações práticas para usuários iniciantes e intermediários sobre como usar o Git e o GitHub diretamente na interface do RStudio para controle de versão de projetos. Na primeira parte, utilizamos as funções do pacote `usethis`, e na seção "Trabalhando com Versionamento", passamos a usar diretamente os comandos do Git.
 
 # Instruções Inicias para uso do Git/Github
 
@@ -40,8 +42,8 @@ library(usethis)
 5.  Vamos usar o pacote `usethis` e os comando abaixo para parear com a sua conta remota no Github. Acesse o nome da sua conta e e-mail em Configurações –\> Perfil Público (Settings).
 
 ```{r, echo = TRUE, eval = FALSE}
-usethis::use_git_config(user.name = "Evaldo Martins", 
-                        user.email = "evaldomartins@ufpa.br")
+usethis::use_git_config(user.name = "Seu Nome", 
+                        user.email = "seu.email@exemplo.com")
 ```
 
 6.  Criar um novo token ou regenerar o token (codigo de 40 dígitos serão produzido)

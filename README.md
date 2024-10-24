@@ -520,7 +520,7 @@ tenha sido feita.
 ``` bash
 
 # Fazer pull para obter a versão mais atualizada da master
-git pull origin master
+git pull
 ```
 
 ### **Passo 9: Deletar a branch local**

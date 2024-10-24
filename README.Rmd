@@ -358,7 +358,8 @@ git merge master
 # git rebase master
 ```
 
--   Explicação de se fazer merge: Se você já vinha trabalhando em uma branch, é crucial incorporar as últimas alterações da `master` nela. Isso pode ser feito via `git merge master` ou `git rebase master`. O `merge` cria um novo commit de mesclagem, enquanto o `rebase` reaplica seus commits sobre as mudanças da `master`.
+-   **Explicação do merge:** Se você já vinha trabalhando em uma branch, é crucial incorporar as últimas alterações da `master` nela. Isso pode ser feito via `git merge master` ou `git rebase master`. O `merge` cria um novo commit de mesclagem, enquanto o `rebase` reaplica seus commits sobre as mudanças da `master`.
+-   **Atenção**: no mometo de fazer Pull Request, você deve ir na branch do Github correspondente aquela que ainda está usando a fim de poder visualizar o botão de solicitação de Pull Request
 
 ### **Passo 3: Fazer alterações no projeto**
 
@@ -392,7 +393,7 @@ git push origin nome-da-branch
 
 ### **Passo 6: Criar um Pull Request no GitHub**
 
-1.  Acesse o seu repositório no GitHub.
+1.  Acesse o seu repositório no GitHub (Pode ser preciso ter que ir na branch de trabalho certa)
 2.  Clique no botão **Compare & Pull Request** que aparecerá assim que o push for feito com sucesso.
 3.  Descreva as mudanças que você fez e por que elas são necessárias.
 4.  Clique em **Create Pull Request** para submeter a solicitação de mesclagem ao mantenedor.

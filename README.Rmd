@@ -334,15 +334,31 @@ git pull origin master
 
 ```
 
-### **Passo 2: Mudar para a branch onde você fez as alterações**
+### **Passo 2:** Criar ou atualizar a branch de trabalho
 
-Agora, mude para a branch onde você fará as suas alterações.
+-   **Se for uma nova branch**:
+
+Se você **ainda não criou** a branch onde fará as alterações:
 
 ```{bash, echo = TRUE, eval = FALSE}
+git checkout -b nome-da-branch
+```
 
-# Mudar para a branch onde as modificações foram realizadas
+-   **Se a branch já existir**:
+
+Se você **já tem** a branch e ela foi criada anteriormente:
+
+```{bash, echo = TRUE, eval = FALSE}
 git checkout nome-da-branch
 ```
+
+```{bash, echo = TRUE, eval = FALSE}
+git merge master
+# ou, se preferir rebase:
+# git rebase master
+```
+
+-   Explicação de se fazer merge: Se você já vinha trabalhando em uma branch, é crucial incorporar as últimas alterações da `master` nela. Isso pode ser feito via `git merge master` ou `git rebase master`. O `merge` cria um novo commit de mesclagem, enquanto o `rebase` reaplica seus commits sobre as mudanças da `master`.
 
 ### **Passo 3: Fazer alterações no projeto**
 

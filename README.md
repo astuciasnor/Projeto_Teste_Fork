@@ -468,14 +468,12 @@ Depois de fazer as modificações, adicione os arquivos alterados ao
 controle de versão e crie um commit descrevendo o que foi alterado.
 
 ``` bash
-
-# Adicionar todas as alterações ao controle de versão
 git add .
 ```
 
-``` bash
+Criar um commit descrevendo as mudanças:
 
-# Criar um commit descrevendo as mudanças
+``` bash
 git commit -m "Descrição clara e objetiva das alterações"
 ```
 
@@ -485,8 +483,6 @@ Agora, envie suas alterações para o repositório remoto, especificamente
 para a branch em que você está trabalhando.
 
 ``` bash
-
-# Enviar as alterações para o repositório remoto
 git push origin nome-da-branch
 ```
 
@@ -512,8 +508,6 @@ Volte para a branch `master` para que você possa sincronizar as
 alterações feitas no repositório.
 
 ``` bash
-
-# Trocar para a branch master
 git checkout master
 ```
 
@@ -524,8 +518,6 @@ Agora, faça um pull para trazer as últimas alterações da branch
 tenha sido feita.
 
 ``` bash
-
-# Fazer pull para obter a versão mais atualizada da master
 git pull
 ```
 
@@ -535,8 +527,6 @@ Após a mesclagem, é uma boa prática deletar a branch que você usou para
 desenvolver as alterações, já que ela não será mais necessária.
 
 ``` bash
-
-# Deletar a branch local
 git branch -d nome-da-branch
 ```
 
@@ -546,8 +536,6 @@ Se a branch não será mais utilizada por ninguém, você pode também
 deletá-la no repositório remoto (GitHub).
 
 ``` bash
-
-# Deletar a branch no repositório remoto
 git push origin --delete nome-da-branch
 ```
 
@@ -580,7 +568,6 @@ Primeiro, você precisa verificar o histórico de commits e identificar o
 ponto para o qual deseja reverter o projeto. Para isso, use o comando:
 
 ``` bash
-
 git reflog
 ```
 
@@ -594,7 +581,6 @@ Para voltar a um commit anterior, execute o seguinte comando,
 substituindo o identificador do commit pelo hash correspondente:
 
 ``` bash
-
 git reset --hard 7d0932f
 ```
 
@@ -609,7 +595,6 @@ resetar, pode voltar atrás executando novamente o comando `git reflog` e
 usando o identificador do commit que deseja recuperar:
 
 ``` bash
-
 git reset --hard 5a6cc0a
 ```
 
@@ -625,7 +610,6 @@ Para forçar o push das alterações locais para o repositório remoto,
 utilize:
 
 ``` bash
-
 git push --force
 ```
 
@@ -759,17 +743,10 @@ descritiva:
 git commit -m "Descrição das alterações"
 ```
 
-### **Passo 6: Enviar as Alterações para o Repositório Remoto**
+### **Passos 6-10: Faça os passos seguintes conforme seja mantenedor ou colaborador**
 
-Por fim, envie suas alterações para o repositório remoto no GitHub:
-
-``` bash
-# Caso esteja atuando como colaborador:
-git push origin nova-branch
-```
-
-Isso enviará as alterações da nova branch para o repositório remoto,
-criando a branch `nova-branch` também no GitHub.
+Faça os paços seguintes, como enviar (push), fazer pull request, etc,
+conforme seja colaborador ou mantenedor (veja respectivas seções acima).
 
 # **Boas Práticas Gerais**
 

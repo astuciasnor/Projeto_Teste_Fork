@@ -418,7 +418,7 @@ Agora, faça um pull para trazer as últimas alterações da branch `master`, in
 ```{bash, echo = TRUE, eval = FALSE}
 
 # Fazer pull para obter a versão mais atualizada da master
-git pull origin master
+git pull
 ```
 
 ### **Passo 9: Deletar a branch local**

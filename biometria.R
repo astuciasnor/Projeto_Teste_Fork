@@ -14,12 +14,7 @@ dados <- read_csv("dados/biometria.csv")
 print(dados)
 
 # Criação do gráfico de barras lado a lado -------------------------------
-ggplot(dados, aes(x = Category, y = Value, fill = Group)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
-  labs(title = "Gráfico de Barras com Grupos Lado a Lado",
-       x = "Categoria",
-       y = "Valor") +
-  theme_minimal()
+ggplot(dados, aes(x = `Comprimento (cm)`, y = `Peso (g)`))
 
 # Criação do gráfico de barras empilhadas ------------------------------
 ggplot(dados, aes(x = Category, y = Value, fill = Group)) +

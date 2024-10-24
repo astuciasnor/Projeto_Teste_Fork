@@ -370,14 +370,12 @@ Realize as alterações necessárias no projeto, como modificar arquivos, adicio
 Depois de fazer as modificações, adicione os arquivos alterados ao controle de versão e crie um commit descrevendo o que foi alterado.
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Adicionar todas as alterações ao controle de versão
 git add .
 ```
 
-```{bash, echo = TRUE, eval = FALSE}
+Criar um commit descrevendo as mudanças:
 
-# Criar um commit descrevendo as mudanças
+```{bash, echo = TRUE, eval = FALSE}
 git commit -m "Descrição clara e objetiva das alterações"
 ```
 
@@ -386,8 +384,6 @@ git commit -m "Descrição clara e objetiva das alterações"
 Agora, envie suas alterações para o repositório remoto, especificamente para a branch em que você está trabalhando.
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Enviar as alterações para o repositório remoto
 git push origin nome-da-branch
 ```
 
@@ -407,8 +403,6 @@ Depois que o mantenedor aprovar e mesclar suas alterações na branch `master`, 
 Volte para a branch `master` para que você possa sincronizar as alterações feitas no repositório.
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Trocar para a branch master
 git checkout master
 ```
 
@@ -417,8 +411,6 @@ git checkout master
 Agora, faça um pull para trazer as últimas alterações da branch `master`, incluindo as suas contribuições e qualquer outra alteração que tenha sido feita.
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Fazer pull para obter a versão mais atualizada da master
 git pull
 ```
 
@@ -427,8 +419,6 @@ git pull
 Após a mesclagem, é uma boa prática deletar a branch que você usou para desenvolver as alterações, já que ela não será mais necessária.
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Deletar a branch local
 git branch -d nome-da-branch
 ```
 
@@ -437,8 +427,6 @@ git branch -d nome-da-branch
 Se a branch não será mais utilizada por ninguém, você pode também deletá-la no repositório remoto (GitHub).
 
 ```{bash, echo = TRUE, eval = FALSE}
-
-# Deletar a branch no repositório remoto
 git push origin --delete nome-da-branch
 ```
 
@@ -459,7 +447,6 @@ Se ocorrer algum erro, é possível voltar ao estado anterior à modificação. 
 Primeiro, você precisa verificar o histórico de commits e identificar o ponto para o qual deseja reverter o projeto. Para isso, use o comando:
 
 ```{bash, echo = TRUE, eval = FALSE}
-
 git reflog
 ```
 
@@ -470,7 +457,6 @@ Esse comando exibirá uma lista com o histórico de commits e seus identificador
 Para voltar a um commit anterior, execute o seguinte comando, substituindo o identificador do commit pelo hash correspondente:
 
 ```{bash, echo = TRUE, eval = FALSE}
-
 git reset --hard 7d0932f
 ```
 
@@ -481,7 +467,6 @@ Esse comando redefine o repositório local para o estado do commit especificado,
 Se você mudar de ideia e quiser restaurar o commit que acabou de resetar, pode voltar atrás executando novamente o comando `git reflog` e usando o identificador do commit que deseja recuperar:
 
 ```{bash, echo = TRUE, eval = FALSE}
-
 git reset --hard 5a6cc0a
 ```
 
@@ -492,7 +477,6 @@ Após fazer um reset local, é importante garantir que o repositório remoto tam
 Para forçar o push das alterações locais para o repositório remoto, utilize:
 
 ```{bash, echo = TRUE, eval = FALSE}
-
 git push --force
 ```
 
@@ -592,17 +576,9 @@ Em seguida, faça o commit das suas alterações com uma mensagem descritiva:
 git commit -m "Descrição das alterações"
 ```
 
-### **Passo 6: Enviar as Alterações para o Repositório Remoto**
+### **Passos 6-10: Faça os passos seguintes conforme seja mantenedor ou colaborador**
 
-Por fim, envie suas alterações para o repositório remoto no GitHub:
-
-```{bash, echo = TRUE, eval = FALSE}
-# Caso esteja atuando como colaborador:
-git push origin nova-branch
-
-```
-
-Isso enviará as alterações da nova branch para o repositório remoto, criando a branch `nova-branch` também no GitHub.
+Faça os paços seguintes, como enviar (push), fazer pull request, etc, conforme seja colaborador ou mantenedor (veja respectivas seções acima).
 
 # **Boas Práticas Gerais**
 

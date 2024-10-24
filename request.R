@@ -22,3 +22,9 @@ df <- tibble::tibble(X,y)
 
 
 # Adicione ao gráfico ma curva de tendência suavizada(smooth) -----------------
+
+df |> 
+  ggplot(aes(x = X, y = y))+
+  geom_point() +
+  geom_smooth()
+  

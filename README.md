@@ -348,7 +348,6 @@ git commit -m "Descrição das alterações"
 ```
 
 ``` bash
-
 git push --set-upstream origin nome-da-branch
 ```
 
@@ -390,12 +389,10 @@ git push
 Após a mesclagem, é possível apagar a branch local e a branch remota:
 
 ``` bash
-
 git branch -d nome-da-branch
 ```
 
 ``` bash
-
 git push origin --delete nome-da-branch
 ```
 
@@ -412,14 +409,12 @@ seu repositório local esteja atualizada com a versão mais recente do
 repositório remoto.
 
 ``` bash
-
-# Troque para a branch master
 git checkout master
 ```
 
-``` bash
+Faça pull para garantir que a branch master está atualizada:
 
-# Faça pull para garantir que a branch master está atualizada
+``` bash
 git pull origin master
 ```
 
@@ -435,7 +430,8 @@ git checkout -b nome-da-branch
 
 - **Se a branch já existir**:
 
-Se você **já tem** a branch e ela foi criada anteriormente.
+Se você **já tem** a branch e ela foi criada anteriormente, faça um
+merge ou rebase.
 
 ``` bash
 git checkout nome-da-branch
@@ -443,18 +439,22 @@ git checkout nome-da-branch
 
 ``` bash
 git merge master
-# ou, se preferir rebase:
-# git rebase master
 ```
 
-- **Explicação do merge:** Se você já vinha trabalhando em uma branch, é
-  crucial incorporar as últimas alterações da `master` nela. Isso pode
-  ser feito via `git merge master` ou `git rebase master`. O `merge`
-  cria um novo commit de mesclagem, enquanto o `rebase` reaplica seus
-  commits sobre as mudanças da `master`.
-- **Atenção**: no momento de fazer Pull Request, você deve ir na branch
-  do Github correspondente àquela que ainda está usando a fim de poder
-  visualizar o botão de solicitação da Pull Request.
+Ou se preferir o rebase:
+
+``` bash
+git rebase master
+```
+
+- **Explicação do merge e rebase:** Se você já vinha trabalhando em uma
+  branch, é crucial incorporar as últimas alterações da `master` nela.
+  Isso pode ser feito via `git merge master` ou `git rebase master`. O
+  `merge` cria um novo commit de mesclagem, enquanto o `rebase` reaplica
+  seus commits sobre as mudanças da `master`.
+- **Atenção**: no momento de fazer Pull Request nko Github, você deve ir
+  na branch do Github correspondente àquela que ainda está usando a fim
+  de poder visualizar o botão de solicitação da Pull Request.
 
 ### **Passo 3: Fazer alterações no projeto**
 
@@ -493,7 +493,7 @@ git push origin nome-da-branch
 ### **Passo 6: Criar um Pull Request no GitHub**
 
 1.  Acesse o seu repositório no GitHub (Pode ser preciso mudar de branch
-    para acessar o botão de Pull Request)
+    para acessar o botão da Pull Request)
 2.  Clique no botão **Compare & Pull Request** que aparecerá assim que o
     push for feito com sucesso.
 3.  Descreva as mudanças que você fez e por que elas são necessárias.

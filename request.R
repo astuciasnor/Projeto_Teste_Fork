@@ -6,7 +6,7 @@
 
 # Crie um vetor x numérico aqui -----------------------------------------------
 
-
+X <- -10:10
 
 # Crie um vetor y em função do vetor x acima ----------------------------------
 

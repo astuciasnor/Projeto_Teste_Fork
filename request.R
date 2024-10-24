@@ -17,7 +17,11 @@ y <- X^3
 
 
 # Crie um grafico de pontos com o dataframe df o ggplot -----------------------
+library(ggplot2)
 
+df |>  
+  ggplot(aes(x = X, y = y)) +
+  geom_point()
 
 
 

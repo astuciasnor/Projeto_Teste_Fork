@@ -17,14 +17,18 @@ y <- X^3
 df <- tibble::tibble(X,y)
 
 # Crie um grafico de pontos com o dataframe df o ggplot -----------------------
+library(ggplot2)
+
+df |>  
+  ggplot(aes(x = X, y = y)) +
+  geom_point()
 
 
 
-
-# Adicione ao gráfico ma curva de tendência suavizada(smooth) -----------------
-
+# Adicione ao gráfico ma curva de tendência suavizada(geom_smooth) -------------
 df |> 
   ggplot(aes(x = X, y = y))+
   geom_point() +
   geom_smooth()
   
+

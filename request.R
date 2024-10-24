@@ -10,7 +10,7 @@ X <- -10:10
 
 # Crie um vetor y em função do vetor x acima ----------------------------------
 
-
+y <- X^3
 
 # Crie um dataframe chamado df unindo os vetores x e y ------------------------
 

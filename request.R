@@ -14,7 +14,7 @@ y <- X^3
 
 # Crie um dataframe chamado df unindo os vetores x e y ------------------------
 
-
+df <- tibble::tibble(X,y)
 
 # Crie um grafico de pontos com o dataframe df o ggplot -----------------------
 

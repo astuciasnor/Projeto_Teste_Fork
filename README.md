@@ -333,9 +333,11 @@ git branch nome-da-branch
 git checkout nome-da-branch
 ```
 
-Agora realiza as modificações no arquivo desejado (`login.txt`). Inclua
-o campo: `digite nome pet.` Após realizar as modificações, adicione-as
-ao controle de versão e faça o commit:
+**Realização de Mudanças** **no Projeto:**
+
+Agora faça as modificações no arquivo desejado (`login.txt`). Inclua o
+campo: `digite nome pet.` Após realizar as modificações, adicione-as ao
+controle de versão e faça o commit:
 
 ``` bash
 git add .
@@ -354,7 +356,7 @@ Após executar o último comando acima, vá no repositório sua página do
 Github (lembre-se, aqui você é o mantenedor) e realize uma
 `Pull Request` . Você mesmo fará mesclagem (`Merge`).
 
-### **Mesclando as Branches**
+### **Mesclando as Branches no computador**
 
 Após as modificações, é hora de mesclar a branch criada com a branch
 principal (`master`):
@@ -397,7 +399,7 @@ git branch -d nome-da-branch
 git push origin --delete nome-da-branch
 ```
 
-## **Criando um Pull Request - Colaborando**
+## **Versionando enquanto colaborador - Criando uma Pull Request**
 
 Se você não for o mantenedor do repositório, precisará criar um **Pull
 Request (PR)** para solicitar a mesclagem de suas modificações com a
@@ -433,7 +435,7 @@ git checkout -b nome-da-branch
 
 - **Se a branch já existir**:
 
-Se você **já tem** a branch e ela foi criada anteriormente:
+Se você **já tem** a branch e ela foi criada anteriormente.
 
 ``` bash
 git checkout nome-da-branch
@@ -450,9 +452,9 @@ git merge master
   ser feito via `git merge master` ou `git rebase master`. O `merge`
   cria um novo commit de mesclagem, enquanto o `rebase` reaplica seus
   commits sobre as mudanças da `master`.
-- **Atenção**: no mometo de fazer Pull Request, você deve ir na branch
-  do Github correspondente aquela que ainda está usando a fim de poder
-  visualizar o botão de solicitação de Pull Request
+- **Atenção**: no momento de fazer Pull Request, você deve ir na branch
+  do Github correspondente àquela que ainda está usando a fim de poder
+  visualizar o botão de solicitação da Pull Request.
 
 ### **Passo 3: Fazer alterações no projeto**
 
@@ -490,8 +492,8 @@ git push origin nome-da-branch
 
 ### **Passo 6: Criar um Pull Request no GitHub**
 
-1.  Acesse o seu repositório no GitHub (Pode ser preciso ter que ir na
-    branch de trabalho certa)
+1.  Acesse o seu repositório no GitHub (Pode ser preciso mudar de branch
+    para acessar o botão de Pull Request)
 2.  Clique no botão **Compare & Pull Request** que aparecerá assim que o
     push for feito com sucesso.
 3.  Descreva as mudanças que você fez e por que elas são necessárias.

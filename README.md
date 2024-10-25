@@ -313,6 +313,13 @@ editáveis às pastas do projeto.
 
 ## Versionando enquanto mantenedor
 
+Antes de começar, atualize a sua branch master local:
+
+``` bash
+git checkout master
+git pull
+```
+
 ### **Criação de Branches e Commits**
 
 Para listar as branches locais e verificar em qual você está
@@ -326,11 +333,7 @@ Agora, crie uma nova branch de nome `login1` para realizar as
 alterações:
 
 ``` bash
-git branch nome-da-branch
-```
-
-``` bash
-git checkout nome-da-branch
+git checkout -b nome-da-branch
 ```
 
 **Realização de Mudanças** **no Projeto:**

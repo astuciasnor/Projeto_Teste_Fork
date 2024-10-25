@@ -236,6 +236,13 @@ Após ter criado uma cópia do repositório e a ele ter sido permitida bifucaç�
 
 ## Versionando enquanto mantenedor
 
+Antes de começar, atualize a sua branch master local:
+
+```{bash, echo = TRUE, eval = FALSE}
+git checkout master
+git pull
+```
+
 ### **Criação de Branches e Commits**
 
 Para listar as branches locais e verificar em qual você está trabalhando, utilize:
@@ -247,11 +254,7 @@ git branch
 Agora, crie uma nova branch de nome `login1` para realizar as alterações:
 
 ```{bash, echo = TRUE, eval = FALSE}
-git branch nome-da-branch
-```
-
-```{bash, echo = TRUE, eval = FALSE}
-git checkout nome-da-branch
+git checkout -b nome-da-branch
 ```
 
 **Realização de Mudanças** **no Projeto:**
